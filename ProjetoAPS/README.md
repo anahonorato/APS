@@ -56,10 +56,10 @@ ProjetoAPS/
 ### Instalação
 ```bash
 # Clone o repositório
-git clone https://github.com/Kadidjah/Analise_Projeto_Sistemas.git
+git clone https://github.com/anahonorato/APS
 
 # Navegue até o projeto
-cd Analise_Projeto_Sistemas/ProjetoAPS
+cd APS/ProjetoAPS
 ```
 
 ### Execução
@@ -108,7 +108,7 @@ Consulte os arquivos de documentação para:
 
 ## 📞 Contato e Suporte
 
-Para dúvidas sobre o projeto, abra uma [issue](https://github.com/Kadidjah/Analise_Projeto_Sistemas/issues) no repositório.
+Para dúvidas sobre o projeto, abra uma [issue](https://github.com/anahonorato/APS) no repositório.
 
 ---
 
