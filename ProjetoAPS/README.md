@@ -8,7 +8,7 @@ Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** 
 ### 👥 **WHO** (Quem?)
 - **Desenvolvedor(es):**
 -  Ana Luísa
--  Gabriel Rufino
+- [Gabriel Rufino] (https://github.com/RufinoX12)
 - João Paulo Ribeiro
 - [Pietro Viana](https://github.com/pietroviannadeveloper)
 - Derik Noronha
