@@ -7,12 +7,12 @@ Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** 
 
 ### 👥 **WHO** (Quem?)
 - **Desenvolvedor(es):**
--  Ana Luísa
+- [Ana Luísa](https://github.com/anahonorato)
 - [Gabriel Rufino](https://github.com/RufinoX12)
-- João Paulo Ribeiro
+- [João Paulo Ribeiro](https://github.com/jhonwayne07)
 - [Pietro Viana](https://github.com/pietroviannadeveloper)
-- Derik Noronha
-- Matheus Henrique
+- [Derik Noronha](https://github.com/Derikcrash)
+- [Matheus Henrique](https://github.com/mhenriqueazevedo-create)
 - **Instituição:** Centro Universitário UDF 
 - **Disciplina:** Engenharia de Software
 
