@@ -3,7 +3,7 @@
 ## 5W - Estrutura do Projeto
 
 ### 🔍 **WHAT** (O Quê?)
-Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** da Universidade de Brasília (UnB/UDF). Ele consiste em uma análise e desenvolvimento de um sistema que aplica princípios e boas práticas da engenharia de software.
+Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** do Centro Universitário do Distrito Federal(UDF). Ele consiste em uma análise e desenvolvimento de um sistema que aplica princípios e boas práticas da engenharia de software.
 
 ### 👥 **WHO** (Quem?)
 - **Desenvolvedor(es):** Ana Luísa, Gabriel Rufino, João Paulo Ribeiro, Pietro Viana, Derik Noronha, Matheus Henrique
