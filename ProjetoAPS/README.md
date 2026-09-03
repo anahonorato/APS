@@ -10,7 +10,7 @@ Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** 
 -  Ana Luísa
 -  Gabriel Rufino
 - João Paulo Ribeiro
-- Pietro Viana [![GitHub Profile](https://shields.io)](https://github.com//pietroviannadeveloper)
+- [Pietro Viana] (https://github.com/pietroviannadeveloper)
 - Derik Noronha
 - Matheus Henrique
 - **Instituição:** Centro Universitário UDF 
