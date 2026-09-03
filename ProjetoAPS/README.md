@@ -10,6 +10,12 @@ Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** 
 -  Ana Luísa
 -  Gabriel Rufino
 - João Paulo Ribeiro
+- <div align="center">
+
+
+-Pietro Vianna [![GitHub](https://img.shields.io/static/v1?label=&message=GitHub&color=181717&style=for-the-badge&logo=github&logoColor=white)](https://github.com/pietroviannadeveloper)
+
+</div>
 - Pietro Viana:[![GitHub](https://img.shields.io/static/v1?label=&message=GitHub&color=181717&style=for-the-badge&logo=github&logoColor=white)](https://github.com/pietroviannadeveloper)
 - Derik Noronha
 - Matheus Henrique
