@@ -6,7 +6,13 @@
 Este projeto é um trabalho acadêmico da disciplina **Engenharia de Software** do Centro Universitário do Distrito Federal(UDF). Ele consiste em uma análise e desenvolvimento de um sistema que aplica princípios e boas práticas da engenharia de software.
 
 ### 👥 **WHO** (Quem?)
-- **Desenvolvedor(es):** Ana Luísa, Gabriel Rufino, João Paulo Ribeiro, Pietro Viana, Derik Noronha, Matheus Henrique
+- **Desenvolvedor(es):**
+-  Ana Luísa
+-  Gabriel Rufino
+- João Paulo Ribeiro
+- Pietro Viana [![Github Badge] (https://shields.io)](https://https://github.com/pietroviannadeveloper)
+- Derik Noronha
+- Matheus Henrique
 - **Instituição:** Centro Universitário UDF 
 - **Disciplina:** Engenharia de Software
 
