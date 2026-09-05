@@ -17,7 +17,7 @@ Disciplina voltada para o estudo de metodologias e técnicas de análise, modela
 
 ```
 ├── Unidades/       # Exercícios práticos da disciplina divididos por aulas
-└── Projeto APS/        # Projeto desenvolvido ao longo do semestre  
+└── Projeto APS/    # Projeto desenvolvido ao longo do semestre  
 ```
 
 
