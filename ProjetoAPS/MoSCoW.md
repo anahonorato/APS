@@ -354,11 +354,6 @@ O repositório apresenta:
 - [x] Reflexão e conclusão do grupo;
 - [ ] Revisão por pares.
 
----
-
-# 📚 Referência
-
-REINEHR, Sheila. **Requisitos de Software**. Material de apoio utilizado na disciplina Engenharia de Requisitos.
 
 ---
 
