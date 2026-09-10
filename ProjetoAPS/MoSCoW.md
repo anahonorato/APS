@@ -1,4 +1,8 @@
+
 # 📋 Projeto de APS — Sistema de Apoio ao Estacionamento da UDF
+
+## 🔗 Link do Board
+[📌 Acessar o Board do projeto no Miro](https://miro.com/welcomeonboard/Y2RxT2ZYT09JNHgzcTVMR096YklKbEVCSkdabXh5d2hpTU9xR0M2VGUzWGtJSytPOUEwK0R5VkVBb2k4ZmR6Nm8rclFYMm56RmxlcUQ2UjZkWjU3QlZRczg2eVFCcHdMdFpkNkhUcjBrenBjdEFDODRVZk95eXZmWDZURWlwbS90R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=66753103227)
 
 ## Levantamento e Priorização de Requisitos
 
