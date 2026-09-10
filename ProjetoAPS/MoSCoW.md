@@ -357,7 +357,7 @@ O repositório apresenta:
 
 ---
 
-**Disciplina:** Engenharia de Requisitos  
-**Projeto:** Levantamento e Priorização de Requisitos  
+**Disciplina:** Análise e Projetos de Sistema  
+**Projeto:** Sistema de Apoio ao Estacionamento da UDF  
 **Profª:** Kadidja Valéria  
 **Repositório:** [GitHub — APS](https://github.com/anahonorato/APS)
