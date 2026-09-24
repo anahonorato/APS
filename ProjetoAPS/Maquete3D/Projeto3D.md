@@ -24,7 +24,7 @@
 
 O **UDF Parking — Campus 3D** é uma prova de conceito desenvolvida para investigar como uma experiência visual e interativa pode facilitar o planejamento do uso do estacionamento universitário.
 
-A solução combina uma **maquete 3D do campus** com informações simuladas sobre:
+A solução combina uma **Recriação fictícia demaquete 3D do campus** com informações simuladas sobre:
 
 * disponibilidade de vagas;
 * planos de estacionamento;
