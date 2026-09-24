@@ -146,6 +146,9 @@ Os documentos do projeto poderão incluir:
 - protótipos das telas;
 - diagramas e apresentação final.
 
+## Documentação de requisitos
+- [Ficha de elicitação REQ-001](Docs_Requisitos/Ficha-Elicitação-REQ-001.md)
+
 ## Observação
 
 Os descontos, planos e a isenção noturna para mulheres fazem parte da proposta acadêmica e dependeriam de análise jurídica, financeira e administrativa antes de uma possível adoção pela UDF.
