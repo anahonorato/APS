@@ -3,8 +3,8 @@
 **Curso:** Engenharia de Software  
 **Disciplina:** Análise e Projeto de Sistemas  
 **Instituição:** UDF Centro Universitário  
-**Grupo/integrantes:** ______________________________________________  
-**Turma:** ____________________  **Data:** ____/____/______  **Versão:** 1.0
+**Grupo/integrantes:** Ana Luísa Honorato, Gabriel Rufino, João Paulo, Pietro Vianna, Derik Noronha, Matheus Henrique.  
+**Turma:** D2 - Engenharia de Software  **Data:** 24/09/2026 **Versão:** 1.0
 
 > Preencha uma ficha para cada requisito identificado. Registre a necessidade na linguagem do stakeholder e esclareça termos ambíguos antes de validar a ficha com ele.
 
