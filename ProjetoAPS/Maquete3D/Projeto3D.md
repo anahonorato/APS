@@ -362,8 +362,8 @@ http://localhost:3000
 | -------------------------- | ---------------------------------------------------------------- |
 | 🌐 **Protótipo publicado** | [udf-parking.vercel.app](https://udf-parking.vercel.app/)        |
 | 💻 **Repositório GitHub**  | [github.com/anahonorato/APS](https://github.com/anahonorato/APS) |
-| 🎨 **Protótipo no Figma**  | *Adicionar link*                                                 |
-| 🗺️ **Board MoSCoW**       | *Adicionar link*                                                 |
+| 🎨 **Protótipo no Figma**  | [Abrir no Figma](https://www.figma.com/design/8sZfS0XjwaMhVcZYGXSvJT/UDF-PARKING?node-id=0-1&p=f&t=noq3KyzZw545d4aB-0)                                                 |
+| 🗺️ **Board MoSCoW**       | [Acessar o Board do projeto no Miro](https://miro.com/welcomeonboard/Y2RxT2ZYT09JNHgzcTVMR096YklKbEVCSkdabXh5d2hpTU9xR0M2VGUzWGtJSytPOUEwK0R5VkVBb2k4ZmR6Nm8rclFYMm56RmxlcUQ2UjZkWjU3QlZRczg2eVFCcHdMdFpkNkhUcjBrenBjdEFDODRVZk95eXZmWDZURWlwbS90R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=66753103227)                                                |
 
 ---
 
