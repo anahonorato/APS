@@ -1,0 +1,18 @@
+@startuml
+skinparam shadowing false
+title UDF Parking - Consultar situação de uma vaga
+start
+:Abrir o protótipo;
+:Escolher campus Sede ou 4R;
+:Carregar vagas simuladas do campus;
+:Selecionar um setor;
+:Exibir vagas e disponibilidade do setor;
+:Selecionar uma vaga;
+:Consultar o estado atual da vaga;
+if (Ocupada?) then ([occupied = true])
+  :Exibir situação: Ocupada;
+else ([occupied = false])
+  :Exibir situação: Livre;
+endif
+stop
+@enduml
