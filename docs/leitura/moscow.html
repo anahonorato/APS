@@ -1,0 +1,768 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Priorização MoSCoW · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/ProjetoAPS/MoSCoW.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/ProjetoAPS/MoSCoW.md">Ver no GitHub</a></div><article class="prose"><h1>📋 Projeto de APS — Sistema de Apoio ao Estacionamento da UDF</h1>
+<h2>🔗 Link do Board</h2>
+<p><a href="https://miro.com/welcomeonboard/Y2RxT2ZYT09JNHgzcTVMR096YklKbEVCSkdabXh5d2hpTU9xR0M2VGUzWGtJSytPOUEwK0R5VkVBb2k4ZmR6Nm8rclFYMm56RmxlcUQ2UjZkWjU3QlZRczg2eVFCcHdMdFpkNkhUcjBrenBjdEFDODRVZk95eXZmWDZURWlwbS90R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=66753103227">📌 Acessar o Board do projeto no Miro</a></p>
+<h2>Levantamento e Priorização de Requisitos</h2>
+<p><strong>Etapa:</strong> Levantamento de Requisitos<br><strong>Técnica de Priorização:</strong> MoSCoW<br><strong>Data:</strong> 10/09/2026<br><strong>Turma:</strong> Engenharia de Software — UDF</p>
+<hr>
+<h1>👥 1. Identificação do Grupo</h1>
+<table>
+<thead>
+<tr>
+<th align="right">Nº</th>
+<th>Integrante</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">1</td>
+<td><a href="https://github.com/anahonorato">Ana Luísa</a></td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td><a href="https://github.com/RufinoX12">Gabriel Rufino</a></td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td><a href="https://github.com/jhonwayne07">João Paulo Ribeiro</a></td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td><a href="https://github.com/pietroviannadeveloper">Pietro Vianna</a></td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td><a href="https://github.com/Derikcrash">Derik Noronha</a></td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td><a href="https://github.com/mhenriqueazevedo-create">Matheus Henrique</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h1>2. Identificação do Projeto</h1>
+<p><strong>Nome do projeto:</strong></p>
+<blockquote>
+<p>Sistema de Apoio ao Estacionamento da UDF</p>
+</blockquote>
+<p><strong>Descrição resumida do projeto:</strong></p>
+<blockquote>
+<p>Proposta de um sistema que permita aos estudantes consultar a disponibilidade de vagas no estacionamento da UDF antes do deslocamento. A solução também reunirá informações sobre preços, horários, descontos noturnos, planos mensais, bimestrais e semestrais e a proposta de isenção noturna para mulheres, contribuindo para o planejamento, a redução de custos e a segurança dos estudantes.</p>
+</blockquote>
+<hr>
+<h1>3. Problema Identificado</h1>
+<h2>3.1 Qual problema será resolvido?</h2>
+<p><strong>Resposta:</strong></p>
+<blockquote>
+<p>Os estudantes da UDF não conseguem saber antecipadamente se existem vagas disponíveis no estacionamento. Essa falta de informação pode causar atrasos, perda de tempo, circulação desnecessária e a necessidade de estacionar longe da instituição.</p>
+<p>Além disso, o pagamento é realizado por diária, sem planos adequados para usuários frequentes. No período noturno, estacionar longe também aumenta a exposição de homens e mulheres durante o trajeto a pé, tornando a segurança uma preocupação relevante.</p>
+</blockquote>
+<hr>
+<h2>3.2 Quem é afetado pelo problema?</h2>
+<p><strong>Resposta:</strong></p>
+<blockquote>
+<p>O problema afeta principalmente os alunos da UDF que utilizam carro, especialmente os estudantes do período noturno. Professores, funcionários, visitantes, a administração da universidade e os responsáveis pelo estacionamento também podem ser afetados.</p>
+</blockquote>
+<hr>
+<h2>3.3 Como o problema é resolvido atualmente?</h2>
+<p><strong>Resposta:</strong></p>
+<blockquote>
+<p>Atualmente, o estudante se desloca até a UDF sem saber se encontrará vaga. A disponibilidade somente é descoberta após a chegada ao estacionamento. Caso esteja lotado, o aluno precisa procurar outro local para estacionar.</p>
+<p>O pagamento é feito por diária, mesmo para estudantes que utilizam o estacionamento com frequência. As informações sobre valores, horários e benefícios também não estão reunidas em um único local.</p>
+</blockquote>
+<hr>
+<h2>3.4 Principais dificuldades encontradas</h2>
+<ol>
+<li>Falta de informação antecipada sobre a disponibilidade de vagas.</li>
+<li>Perda de tempo procurando estacionamento e possibilidade de atraso.</li>
+<li>Custo elevado para estudantes que pagam diária frequentemente.</li>
+<li>Necessidade de estacionar longe e realizar trajetos a pé durante a noite.</li>
+<li>Falta de informações centralizadas sobre preços, horários e benefícios.</li>
+</ol>
+<hr>
+<h1>🎯 4. Objetivo do Projeto</h1>
+<p><strong>Objetivo:</strong></p>
+<blockquote>
+<p>Nosso projeto pretende facilitar o planejamento do deslocamento dos estudantes da UDF, oferecendo informações sobre vagas, preços, planos e benefícios do estacionamento, contribuindo para a redução de atrasos e custos e para deslocamentos mais seguros, especialmente no período noturno.</p>
+</blockquote>
+<hr>
+<h1>👤 5. Stakeholders</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Stakeholder</th>
+<th>Papel</th>
+<th>Necessidade/Interesse</th>
+<th>Influência</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ST01</td>
+<td>Alunos que utilizam carro</td>
+<td>Usuários principais</td>
+<td>Consultar vagas, preços e benefícios</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>ST02</td>
+<td>Alunas do período noturno</td>
+<td>Usuárias beneficiadas pela proposta de isenção</td>
+<td>Utilizar uma área próxima e reduzir trajetos noturnos a pé</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>ST03</td>
+<td>Administração da UDF</td>
+<td>Responsável institucional</td>
+<td>Avaliar a viabilidade e definir as políticas</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>ST04</td>
+<td>Gestão do estacionamento</td>
+<td>Responsável operacional</td>
+<td>Informar ocupação, preços, horários e regras</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>ST05</td>
+<td>Professores, funcionários e visitantes</td>
+<td>Usuários secundários</td>
+<td>Consultar a disponibilidade do estacionamento</td>
+<td>Média</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Stakeholder principal</h2>
+<p><strong>Stakeholder:</strong></p>
+<blockquote>
+<p>Alunos da UDF que utilizam carro, principalmente no período noturno.</p>
+</blockquote>
+<p><strong>Por que ele foi considerado o principal stakeholder?</strong></p>
+<blockquote>
+<p>Os alunos são os usuários diretamente afetados pela falta de informações sobre vagas e pelo pagamento recorrente de diárias. São eles que enfrentam atrasos, perda de tempo, custos elevados e maior exposição ao estacionar longe da instituição durante a noite.</p>
+</blockquote>
+<hr>
+<h1>🗣️ 6. Levantamento de Informações</h1>
+<table>
+<thead>
+<tr>
+<th>Pergunta</th>
+<th>Resposta</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>O que o usuário precisa fazer?</td>
+<td>Consultar vagas, preços, horários, planos e benefícios antes de ir à UDF.</td>
+</tr>
+<tr>
+<td>Qual problema enfrenta atualmente?</td>
+<td>Não sabe se encontrará vaga e paga diária mesmo utilizando o estacionamento frequentemente.</td>
+</tr>
+<tr>
+<td>Quais informações precisa consultar?</td>
+<td>Disponibilidade, nível de lotação, setores, preços, horários, planos, descontos e regras.</td>
+</tr>
+<tr>
+<td>Quais informações precisa cadastrar ou alterar?</td>
+<td>Dados básicos de identificação e vínculo acadêmico, caso sejam necessários para benefícios.</td>
+</tr>
+<tr>
+<td>Quais tarefas são repetitivas?</td>
+<td>Procurar vaga, verificar preços e realizar o pagamento da diária.</td>
+</tr>
+<tr>
+<td>Quais tarefas consomem mais tempo?</td>
+<td>Procurar vagas e estacionar em locais alternativos quando o estacionamento está lotado.</td>
+</tr>
+<tr>
+<td>Quais erros acontecem atualmente?</td>
+<td>Deslocar-se de carro acreditando que existem vagas e descobrir a lotação somente ao chegar.</td>
+</tr>
+<tr>
+<td>Precisa receber notificações?</td>
+<td>É desejável receber notificações sobre lotação, mas isso pode ficar para versões futuras.</td>
+</tr>
+<tr>
+<td>Precisa gerar documentos ou relatórios?</td>
+<td>A administração poderá receber relatórios de ocupação em versões futuras.</td>
+</tr>
+<tr>
+<td>Existem informações que precisam ser protegidas?</td>
+<td>Sim. Dados pessoais, acadêmicos e informações usadas para validar benefícios devem ser protegidos.</td>
+</tr>
+<tr>
+<td>O sistema precisará se comunicar com outros sistemas?</td>
+<td>Não nesta etapa. Integrações futuras dependerão de autorização e análise técnica.</td>
+</tr>
+<tr>
+<td>Existem regras obrigatórias que precisam ser respeitadas?</td>
+<td>Sim. Regras da UDF, condições do estacionamento, proteção de dados e critérios de concessão de benefícios.</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>💡 7. Necessidades Identificadas</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Stakeholder</th>
+<th>Necessidade identificada</th>
+<th>Problema relacionado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N01</td>
+<td>Alunos</td>
+<td>Consultar vagas antes do deslocamento</td>
+<td>Falta de informação antecipada</td>
+</tr>
+<tr>
+<td>N02</td>
+<td>Alunos</td>
+<td>Visualizar o nível de lotação por setor</td>
+<td>Tempo perdido procurando vagas</td>
+</tr>
+<tr>
+<td>N03</td>
+<td>Alunos</td>
+<td>Consultar preços e horários</td>
+<td>Informações descentralizadas</td>
+</tr>
+<tr>
+<td>N04</td>
+<td>Alunos frequentes</td>
+<td>Ter alternativas ao pagamento diário</td>
+<td>Custo recorrente elevado</td>
+</tr>
+<tr>
+<td>N05</td>
+<td>Alunos do período noturno</td>
+<td>Obter desconto noturno</td>
+<td>Custo do estacionamento à noite</td>
+</tr>
+<tr>
+<td>N06</td>
+<td>Mulheres do período noturno</td>
+<td>Consultar as condições da proposta de isenção</td>
+<td>Segurança e trajetos externos noturnos</td>
+</tr>
+<tr>
+<td>N07</td>
+<td>Homens e mulheres</td>
+<td>Consultar orientações e acessos mais seguros</td>
+<td>Exposição durante o deslocamento noturno</td>
+</tr>
+<tr>
+<td>N08</td>
+<td>Administração</td>
+<td>Acompanhar a utilização do estacionamento</td>
+<td>Falta de informações consolidadas</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>⚙️ 8. Requisitos Funcionais</h1>
+<h2>Requisitos Funcionais do Projeto</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requisito funcional</th>
+<th>Stakeholder/Fonte</th>
+<th>Necessidade</th>
+<th>Prioridade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RF01</td>
+<td>O sistema deve permitir a consulta da disponibilidade de vagas antes do deslocamento até a UDF.</td>
+<td>ST01</td>
+<td>N01</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>RF02</td>
+<td>O sistema deve apresentar a ocupação por setor e indicar se há muitas vagas, poucas vagas ou lotação.</td>
+<td>ST01 e ST04</td>
+<td>N02</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>RF03</td>
+<td>O sistema deve apresentar preços, horários e formas de pagamento do estacionamento.</td>
+<td>ST01 e ST04</td>
+<td>N03</td>
+<td>Must Have</td>
+</tr>
+<tr>
+<td>RF04</td>
+<td>O sistema deve apresentar e comparar os planos mensal, bimestral e semestral com o pagamento por diária.</td>
+<td>ST01 e ST03</td>
+<td>N04</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>RF05</td>
+<td>O sistema deve informar os descontos disponíveis para estudantes no período noturno.</td>
+<td>ST01 e ST03</td>
+<td>N05</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>O sistema deve informar os critérios da proposta de isenção noturna especificamente para mulheres.</td>
+<td>ST02 e ST03</td>
+<td>N06</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>RF07</td>
+<td>O sistema deve apresentar orientações de segurança e indicar acessos ou trajetos mais seguros no período noturno.</td>
+<td>ST01 e ST02</td>
+<td>N07</td>
+<td>Should Have</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>O sistema deve permitir o recebimento de notificações quando o estacionamento estiver próximo da lotação ou lotado.</td>
+<td>ST01</td>
+<td>N01 e N02</td>
+<td>Could Have</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>⭐ 9. Requisitos de Qualidade</h1>
+<h2>Requisitos de Qualidade do Projeto</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Característica</th>
+<th>Requisito</th>
+<th>Como será verificado?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RQ01</td>
+<td>Desempenho</td>
+<td>O sistema deve apresentar o resultado das consultas em até 2 segundos para 95% das requisições em condições normais de uso.</td>
+<td>Testes de desempenho e medição do tempo de resposta</td>
+</tr>
+<tr>
+<td>RQ02</td>
+<td>Segurança</td>
+<td>O sistema deve proteger dados pessoais e acadêmicos e limitar o acesso às informações de benefícios.</td>
+<td>Testes de acesso e verificação das permissões</td>
+</tr>
+<tr>
+<td>RQ03</td>
+<td>Usabilidade</td>
+<td>Um estudante deve conseguir consultar a disponibilidade de vagas em até três interações após acessar o sistema.</td>
+<td>Testes de usabilidade com estudantes</td>
+</tr>
+<tr>
+<td>RQ04</td>
+<td>Confiabilidade</td>
+<td>O sistema deve mostrar o horário da última atualização das informações de ocupação.</td>
+<td>Comparação entre o horário informado e o registro da atualização</td>
+</tr>
+<tr>
+<td>RQ05</td>
+<td>Compatibilidade</td>
+<td>O sistema deve funcionar em navegadores atuais de computadores e dispositivos móveis.</td>
+<td>Testes nos principais navegadores e tamanhos de tela</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🚧 10. Restrições</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Categoria</th>
+<th>Restrição</th>
+<th>Justificativa/Fonte</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RES01</td>
+<td>Escopo</td>
+<td>A etapa atual não incluirá sensores, APIs, cancelas ou desenvolvimento completo do sistema.</td>
+<td>O trabalho está concentrado na análise do problema e dos requisitos</td>
+</tr>
+<tr>
+<td>RES02</td>
+<td>Institucional</td>
+<td>Descontos, planos e isenção noturna dependerão de aprovação jurídica, financeira e administrativa da UDF.</td>
+<td>As tarifas não podem ser definidas pelo grupo</td>
+</tr>
+<tr>
+<td>RES03</td>
+<td>Infraestrutura</td>
+<td>A precisão das informações dependerá do acesso a dados confiáveis sobre a ocupação do estacionamento.</td>
+<td>A fonte definitiva dos dados ainda deverá ser definida</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>📜 11. Regras de Negócio</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Regra de negócio</th>
+<th>Fonte</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RN01</td>
+<td>Os planos e descontos destinados a estudantes somente poderão ser concedidos mediante validação do vínculo acadêmico ativo.</td>
+<td>Administração da UDF</td>
+</tr>
+<tr>
+<td>RN02</td>
+<td>A proposta de isenção noturna para mulheres deverá ser aplicada apenas no período e nas condições definidos e aprovados pela UDF.</td>
+<td>Administração da UDF</td>
+</tr>
+<tr>
+<td>RN03</td>
+<td>A situação do estacionamento deverá ser apresentada como “muitas vagas”, “poucas vagas” ou “lotado”, conforme critérios definidos pela gestão do estacionamento.</td>
+<td>Gestão do estacionamento</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🔗 12. Rastreabilidade Inicial</h1>
+<table>
+<thead>
+<tr>
+<th>Necessidade</th>
+<th>Stakeholder</th>
+<th>Requisito(s) relacionado(s)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>N01</td>
+<td>ST01</td>
+<td>RF01, RF08, RQ01 e RQ04</td>
+</tr>
+<tr>
+<td>N02</td>
+<td>ST01 e ST04</td>
+<td>RF02, RF08 e RQ04</td>
+</tr>
+<tr>
+<td>N03</td>
+<td>ST01 e ST04</td>
+<td>RF03</td>
+</tr>
+<tr>
+<td>N04</td>
+<td>ST01 e ST03</td>
+<td>RF04</td>
+</tr>
+<tr>
+<td>N05</td>
+<td>ST01 e ST03</td>
+<td>RF05</td>
+</tr>
+<tr>
+<td>N06</td>
+<td>ST02 e ST03</td>
+<td>RF06 e RQ02</td>
+</tr>
+<tr>
+<td>N07</td>
+<td>ST01 e ST02</td>
+<td>RF07 e RQ03</td>
+</tr>
+<tr>
+<td>N08</td>
+<td>ST03 e ST04</td>
+<td>RF02 e RQ04</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🏷️ 13. Priorização dos Requisitos — Técnica MoSCoW</h1>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🔴 <strong>M — Must Have</strong></td>
+<td>Requisito indispensável</td>
+</tr>
+<tr>
+<td>🟠 <strong>S — Should Have</strong></td>
+<td>Muito importante, mas pode esperar temporariamente</td>
+</tr>
+<tr>
+<td>🟢 <strong>C — Could Have</strong></td>
+<td>Desejável se houver tempo e recursos</td>
+</tr>
+<tr>
+<td>⚪ <strong>W — Won&#39;t Have Now</strong></td>
+<td>Não será implementado nesta entrega</td>
+</tr>
+</tbody></table>
+<h2>Matriz de Priorização</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requisito</th>
+<th>MoSCoW</th>
+<th>Justificativa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RF01</td>
+<td>Consultar a disponibilidade de vagas</td>
+<td>M</td>
+<td>Representa a função principal do sistema</td>
+</tr>
+<tr>
+<td>RF02</td>
+<td>Visualizar a ocupação e o status por setor</td>
+<td>M</td>
+<td>Permite compreender rapidamente a situação do estacionamento</td>
+</tr>
+<tr>
+<td>RF03</td>
+<td>Consultar preços, horários e pagamentos</td>
+<td>M</td>
+<td>Reúne informações essenciais para a decisão do estudante</td>
+</tr>
+<tr>
+<td>RF04</td>
+<td>Consultar e comparar planos</td>
+<td>S</td>
+<td>Reduz custos, mas depende de aprovação financeira</td>
+</tr>
+<tr>
+<td>RF05</td>
+<td>Consultar descontos noturnos</td>
+<td>S</td>
+<td>Possui alto valor, mas depende de uma política institucional</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>Consultar a isenção noturna para mulheres</td>
+<td>S</td>
+<td>Contribui para a segurança, mas depende de análise e aprovação</td>
+</tr>
+<tr>
+<td>RF07</td>
+<td>Consultar orientações e trajetos mais seguros</td>
+<td>S</td>
+<td>Complementa a solução e fortalece a segurança noturna</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>Receber notificações de lotação</td>
+<td>C</td>
+<td>Melhora a experiência, mas não é necessária para a primeira versão</td>
+</tr>
+<tr>
+<td>RQ01</td>
+<td>Responder às consultas em até 2 segundos</td>
+<td>M</td>
+<td>Evita espera durante a tomada de decisão</td>
+</tr>
+<tr>
+<td>RQ02</td>
+<td>Proteger dados pessoais e acadêmicos</td>
+<td>M</td>
+<td>É necessário proteger as informações utilizadas pelo sistema</td>
+</tr>
+<tr>
+<td>RQ03</td>
+<td>Permitir a consulta em até três interações</td>
+<td>M</td>
+<td>A consulta precisa ser simples e rápida</td>
+</tr>
+<tr>
+<td>RQ04</td>
+<td>Informar o horário da última atualização</td>
+<td>M</td>
+<td>Evita que o usuário tome decisões com dados desatualizados</td>
+</tr>
+<tr>
+<td>RQ05</td>
+<td>Funcionar em computadores e celulares</td>
+<td>M</td>
+<td>Os estudantes utilizarão principalmente dispositivos móveis</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🚀 14. Requisitos da Primeira Versão</h1>
+<table>
+<thead>
+<tr>
+<th align="right">Ordem</th>
+<th>ID</th>
+<th>Requisito</th>
+<th>Por que deve estar na primeira versão?</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">1</td>
+<td>RF01</td>
+<td>Consultar disponibilidade de vagas</td>
+<td>É a principal finalidade da solução</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td>RF02</td>
+<td>Visualizar ocupação e status por setor</td>
+<td>Transforma os dados em uma informação clara</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>RF03</td>
+<td>Consultar preços e horários</td>
+<td>Ajuda o aluno a decidir se utilizará o estacionamento</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>RQ03</td>
+<td>Consulta simples e rápida</td>
+<td>Garante que a solução seja fácil de utilizar</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>RQ04</td>
+<td>Informar a última atualização</td>
+<td>Aumenta a confiança nas informações apresentadas</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>⏭️ 15. Requisitos para Versões Futuras</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Requisito</th>
+<th>Motivo para adiar</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RF04</td>
+<td>Planos mensal, bimestral e semestral</td>
+<td>Depende de estudo financeiro e aprovação institucional</td>
+<td>Médio</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>Isenção noturna para mulheres</td>
+<td>Depende de análise jurídica, financeira e administrativa</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>RF08</td>
+<td>Notificações de lotação</td>
+<td>Requer infraestrutura adicional de notificações e dados atualizados</td>
+<td>Baixo</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>🔍 16. Revisão por Pares</h1>
+<p><strong>Grupo responsável pela revisão:</strong> A definir após a realização da revisão por pares.</p>
+<table>
+<thead>
+<tr>
+<th>ID do requisito</th>
+<th>Problema encontrado</th>
+<th>Sugestão de melhoria</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RF02</td>
+<td>Os critérios de classificação da lotação ainda não foram definidos</td>
+<td>Definir percentuais para muitas vagas, poucas vagas e lotado</td>
+</tr>
+<tr>
+<td>RF06</td>
+<td>A aplicação depende de aprovação institucional</td>
+<td>Manter o requisito como proposta e registrar os critérios após aprovação</td>
+</tr>
+<tr>
+<td>RQ04</td>
+<td>A frequência de atualização dos dados ainda não está definida</td>
+<td>Definir o intervalo de atualização durante o estudo de viabilidade</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>✅ 17. Checklist de Qualidade dos Requisitos</h1>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Os requisitos estão completos?</li>
+<li><input checked="" disabled="" type="checkbox"> Os requisitos estão corretos em relação às necessidades?</li>
+<li><input checked="" disabled="" type="checkbox"> Cada requisito representa uma capacidade ou característica?</li>
+<li><input checked="" disabled="" type="checkbox"> Os requisitos são necessários?</li>
+<li><input checked="" disabled="" type="checkbox"> As dependências de viabilidade foram identificadas?</li>
+<li><input checked="" disabled="" type="checkbox"> Todos possuem prioridade?</li>
+<li><input checked="" disabled="" type="checkbox"> Termos ambíguos foram reduzidos?</li>
+<li><input checked="" disabled="" type="checkbox"> Os requisitos podem ser verificados ou testados?</li>
+<li><input checked="" disabled="" type="checkbox"> A fonte ou stakeholder está identificado?</li>
+<li><input checked="" disabled="" type="checkbox"> As necessidades estão relacionadas aos requisitos?</li>
+<li><input checked="" disabled="" type="checkbox"> Os requisitos de qualidade são mensuráveis sempre que possível?</li>
+<li><input checked="" disabled="" type="checkbox"> As prioridades MoSCoW possuem justificativa?</li>
+<li><input disabled="" type="checkbox"> A revisão por outro grupo ainda deverá ser realizada.</li>
+</ul>
+<hr>
+<h1>💭 18. Reflexão do Grupo</h1>
+<h2>18.1 Qual requisito gerou mais discussão durante o levantamento? Por quê?</h2>
+<blockquote>
+<p>O requisito relacionado à isenção da taxa no período noturno para mulheres gerou mais discussão. A proposta possui relevância para a segurança feminina, mas também depende de análise jurídica, financeira e administrativa antes de uma possível adoção pela UDF.</p>
+</blockquote>
+<hr>
+<h2>18.2 Qual necessidade inicialmente parecia simples, mas gerou vários requisitos?</h2>
+<blockquote>
+<p>A consulta de vagas parecia uma necessidade simples, mas gerou requisitos relacionados ao nível de lotação, divisão por setores, horário da última atualização, desempenho, compatibilidade com dispositivos móveis e notificações.</p>
+</blockquote>
+<hr>
+<h2>18.3 O grupo identificou algum requisito implícito durante a discussão?</h2>
+<blockquote>
+<p>Sim. Foi identificada a necessidade de mostrar o horário da última atualização. Sem essa informação, o aluno poderia consultar um dado antigo e tomar uma decisão incorreta sobre ir de carro.</p>
+</blockquote>
+<hr>
+<h2>18.4 Qual requisito foi mais difícil de priorizar utilizando MoSCoW? Por quê?</h2>
+<blockquote>
+<p>A isenção noturna para mulheres foi o requisito mais difícil de priorizar. Ela possui alto valor para a proposta de segurança, mas não pode ser considerada indispensável para o funcionamento inicial do sistema porque depende de decisões e aprovações da instituição. Por isso, foi classificada como Should Have.</p>
+</blockquote>
+<hr>
+<h2>18.5 Houve algum requisito inicialmente considerado Must que mudou de prioridade?</h2>
+<blockquote>
+<p>Sim. Os planos mensal, bimestral e semestral foram inicialmente considerados indispensáveis, mas passaram para Should Have. A primeira versão pode informar vagas, preços e horários utilizando a cobrança atual, enquanto a criação de novos planos depende de estudo financeiro e aprovação da UDF.</p>
+</blockquote>
+<hr>
+<h1>📝 19. Conclusão</h1>
+<p><strong>Conclusão:</strong></p>
+<blockquote>
+<p>O projeto investiga a falta de informação antecipada sobre vagas e os custos recorrentes enfrentados pelos estudantes que utilizam o estacionamento da UDF. Os principais stakeholders são os alunos, a administração da universidade e a gestão do estacionamento.</p>
+<p>As necessidades mais relevantes envolvem a consulta da disponibilidade de vagas, o acesso a preços e horários, a criação de alternativas ao pagamento diário e a segurança no período noturno.</p>
+<p>A técnica MoSCoW permitiu separar as funções indispensáveis das melhorias que dependem de recursos ou aprovação institucional. A primeira versão deverá concentrar-se nas informações sobre vagas, ocupação, preços e horários, mantendo planos, descontos, isenção noturna para mulheres e notificações como funcionalidades importantes para a evolução da proposta.</p>
+</blockquote>
+<hr>
+<h1>📦 Entregável</h1>
+<p>O repositório apresenta:</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Identificação do projeto e dos integrantes;</li>
+<li><input checked="" disabled="" type="checkbox"> Descrição do problema;</li>
+<li><input checked="" disabled="" type="checkbox"> Objetivo do projeto;</li>
+<li><input checked="" disabled="" type="checkbox"> Identificação dos stakeholders;</li>
+<li><input checked="" disabled="" type="checkbox"> Levantamento das necessidades;</li>
+<li><input checked="" disabled="" type="checkbox"> Oito requisitos funcionais;</li>
+<li><input checked="" disabled="" type="checkbox"> Cinco requisitos de qualidade;</li>
+<li><input checked="" disabled="" type="checkbox"> Três restrições;</li>
+<li><input checked="" disabled="" type="checkbox"> Três regras de negócio;</li>
+<li><input checked="" disabled="" type="checkbox"> Rastreabilidade entre necessidades e requisitos;</li>
+<li><input checked="" disabled="" type="checkbox"> Priorização utilizando MoSCoW;</li>
+<li><input checked="" disabled="" type="checkbox"> Definição dos requisitos da primeira versão;</li>
+<li><input checked="" disabled="" type="checkbox"> Reflexão e conclusão do grupo;</li>
+<li><input disabled="" type="checkbox"> Revisão por pares.</li>
+</ul>
+<hr>
+<p><strong>Disciplina:</strong> Análise e Projetos de Sistema<br><strong>Projeto:</strong> Sistema de Apoio ao Estacionamento da UDF<br><strong>Profª:</strong> Kadidja Valéria<br><strong>Repositório:</strong> <a href="https://github.com/anahonorato/APS">GitHub — APS</a></p>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

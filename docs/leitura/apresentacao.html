@@ -1,0 +1,249 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Guia de apresentação · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/Apresenta%C3%A7%C3%A3o/README.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/Apresenta%C3%A7%C3%A3o/README.md">Ver no GitHub</a></div><article class="prose"><div align="center">
+
+<h1>UDF PARKING</h1>
+<h3>Sua chegada já começa mais tranquila.</h3>
+<p><strong>Menos voltas. Mais planejamento. Cuidado no caminho.</strong></p>
+<p>Projeto acadêmico de Engenharia de Software · Análise e Projeto de Sistemas · UDF</p>
+<p><a href="https://www.figma.com/design/8sZfS0XjwaMhVcZYGXSvJT/UDF-PARKING?node-id=17-702"><strong>🎨 Explorar o novo Figma</strong></a> · <a href="https://udf-parking.vercel.app/"><strong>🌐 Abrir a maquete 3D</strong></a> · <a href="../downloads/Apresenta%C3%A7%C3%A3o/UDF_Parking_Apresentacao.pptx"><strong>📽️ Apresentação</strong></a> · <a href="../downloads/Apresenta%C3%A7%C3%A3o/UDF_Parking_Video.mp4"><strong>▶️ Vídeo</strong></a></p>
+</div>
+
+<hr>
+<h2>O projeto em 30 segundos</h2>
+<blockquote>
+<p>O <strong>UDF Parking</strong> propõe reunir disponibilidade de vagas, opções de planos e benefícios noturnos em uma experiência simples para os estudantes da UDF. A ideia é ajudar o aluno a planejar a ida à faculdade, perder menos tempo procurando estacionamento e reduzir a necessidade de estacionar longe, especialmente à noite.</p>
+</blockquote>
+<p>Esta pasta reúne os materiais para apresentar a proposta e demonstrar seus protótipos.</p>
+<h2>O problema que queremos resolver</h2>
+<p>A experiência do aluno começa antes de entrar na sala de aula.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Dificuldade</th>
+<th align="left">Resposta proposta</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Sair sem saber se encontrará vaga</td>
+<td align="left">Consultar a disponibilidade antes do deslocamento</td>
+</tr>
+<tr>
+<td align="left">Perder tempo procurando onde estacionar</td>
+<td align="left">Visualizar setores e a situação das vagas</td>
+</tr>
+<tr>
+<td align="left">Pagar diárias com frequência</td>
+<td align="left">Comparar planos mensais, bimestrais e semestrais</td>
+</tr>
+<tr>
+<td align="left">Estacionar longe e caminhar à noite</td>
+<td align="left">Incentivar o uso do estacionamento próximo, com benefícios noturnos</td>
+</tr>
+</tbody></table>
+<p><strong>Público principal:</strong> estudantes da UDF que utilizam carro, com atenção especial ao período noturno.</p>
+<h2>Quatro telas. Uma experiência conectada.</h2>
+<p>O protótipo mobile foi atualizado com uma identidade visual mais expressiva: <strong>azul-noturno, vermelho UDF, tons claros e verde para disponibilidade</strong>. Títulos, números e ações têm hierarquia própria para facilitar a leitura.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Tela</th>
+<th align="left">O que apresenta</th>
+<th align="left">O que demonstrar</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>01 · Início</strong></td>
+<td align="left">Saudação, disponibilidade geral e resumo dos setores</td>
+<td align="left">Como o aluno encontra a informação principal rapidamente</td>
+</tr>
+<tr>
+<td align="left"><strong>02 · Mapa de vagas</strong></td>
+<td align="left">Mapa esquemático do setor A, vagas identificadas e detalhe de uma vaga acessível</td>
+<td align="left">Como ocupação e acessibilidade são informações distintas</td>
+</tr>
+<tr>
+<td align="left"><strong>03 · Planos e tarifas</strong></td>
+<td align="left">Diária e propostas de planos mensal, bimestral e semestral</td>
+<td align="left">Como comparar períodos e valores equivalentes por mês</td>
+</tr>
+<tr>
+<td align="left"><strong>04 · Cuidado noturno</strong></td>
+<td align="left">Descontos para estudantes e proposta de isenção noturna para mulheres</td>
+<td align="left">Como custo e deslocamento noturno fazem parte do problema</td>
+</tr>
+</tbody></table>
+<p>A nova versão contém <strong>quatro telas, componentes reutilizáveis e 17 conexões de navegação</strong>, com transições suaves. A versão original foi mantida no mesmo arquivo para comparação.</p>
+<h3>Teste o protótipo</h3>
+<ol>
+<li><a href="https://www.figma.com/design/8sZfS0XjwaMhVcZYGXSvJT/UDF-PARKING?node-id=17-702">Abra a versão 02 no Figma</a>.</li>
+<li>Selecione a tela <strong>“01 • Início”</strong>.</li>
+<li>Clique em <strong>▶ Apresentar</strong>.</li>
+<li>Use os botões e a navegação inferior para explorar <strong>Início → Vagas → Planos → Cuidado</strong>.</li>
+</ol>
+<p>O fluxo demonstra a navegação entre telas. A consulta de vagas não equivale a uma reserva.</p>
+<h2>Cuidado no caminho</h2>
+<p>A proposta considera a <strong>segurança de homens e mulheres</strong>, buscando reduzir a necessidade de realizar trajetos externos longos a pé no período noturno.</p>
+<p>Dois benefícios são apresentados para avaliação:</p>
+<ul>
+<li><strong>Descontos noturnos para estudantes</strong>, como incentivo ao uso do estacionamento próximo à instituição.</li>
+<li><strong>Isenção da taxa de estacionamento à noite especificamente para mulheres</strong>, como medida proposta de apoio ao deslocamento noturno.</li>
+</ul>
+<p>Esses benefícios dependem de avaliação de viabilidade e aprovação da UDF e da administração do estacionamento. Não representam políticas já implantadas nem uma garantia de segurança.</p>
+<h2>Da interface à maquete 3D</h2>
+<p>O Figma apresenta a experiência mobile. A maquete permite explorar uma demonstração espacial do estacionamento, consultar vagas simuladas e observar a movimentação dos veículos.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Material</th>
+<th align="left">Papel no projeto</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Figma</strong></td>
+<td align="left">Telas, identidade visual, componentes e navegação</td>
+</tr>
+<tr>
+<td align="left"><strong>Maquete 3D</strong></td>
+<td align="left">Exploração visual do campus e simulação do estacionamento</td>
+</tr>
+<tr>
+<td align="left"><strong>MoSCoW</strong></td>
+<td align="left">Priorização das funcionalidades</td>
+</tr>
+<tr>
+<td align="left"><strong>Lean Canvas</strong></td>
+<td align="left">Organização do problema, público e proposta de valor</td>
+</tr>
+<tr>
+<td align="left"><strong>Diagramas UML</strong></td>
+<td align="left">Modelagem dos processos, estrutura e relacionamentos do sistema</td>
+</tr>
+</tbody></table>
+<p><strong>Tecnologias da maquete:</strong> Next.js, React, TypeScript, Three.js, WebGL, Canvas 2D, Tailwind CSS e CSS. A publicação utiliza Vercel.</p>
+<p><a href="https://udf-parking.vercel.app/">Explorar a maquete</a> · <a href="../downloads/ProjetoAPS/Maquete3D/Projeto3D.md">Conhecer sua construção</a></p>
+<h2>Materiais para apresentar</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Recurso</th>
+<th align="left">Acesso</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Slides em PowerPoint</td>
+<td align="left"><a href="../downloads/Apresenta%C3%A7%C3%A3o/UDF_Parking_Apresentacao.pptx">UDF_Parking_Apresentacao.pptx</a></td>
+</tr>
+<tr>
+<td align="left">Vídeo do projeto</td>
+<td align="left"><a href="../downloads/Apresenta%C3%A7%C3%A3o/UDF_Parking_Video.mp4">UDF_Parking_Video.mp4</a></td>
+</tr>
+<tr>
+<td align="left">Figma — versão 02</td>
+<td align="left"><a href="https://www.figma.com/design/8sZfS0XjwaMhVcZYGXSvJT/UDF-PARKING?node-id=17-702">Abrir as telas atualizadas</a></td>
+</tr>
+<tr>
+<td align="left">Maquete interativa</td>
+<td align="left"><a href="https://udf-parking.vercel.app/">Abrir UDF Parking</a></td>
+</tr>
+<tr>
+<td align="left">Visão geral do projeto</td>
+<td align="left"><a href="../downloads/ProjetoAPS/README.md">Ler a proposta</a></td>
+</tr>
+<tr>
+<td align="left">Requisitos</td>
+<td align="left"><a href="../downloads/ProjetoAPS/Docs_Requisitos/Ficha-Elicita%C3%A7%C3%A3o-REQ-001.md">Ficha de elicitação</a></td>
+</tr>
+<tr>
+<td align="left">Priorização MoSCoW</td>
+<td align="left"><a href="../downloads/ProjetoAPS/MoSCoW.md">Consultar a priorização</a></td>
+</tr>
+<tr>
+<td align="left">Lean Canvas</td>
+<td align="left"><a href="https://github.com/anahonorato/APS/tree/main/Unidade4/ModelagemSistemas">Abrir os modelos</a></td>
+</tr>
+<tr>
+<td align="left">Modelagem UML</td>
+<td align="left"><a href="https://github.com/anahonorato/APS/tree/main/Unidade4/Documenta%C3%A7%C3%A3oUML">Consultar os diagramas</a></td>
+</tr>
+<tr>
+<td align="left">Atividades e objetos — explicação e fontes</td>
+<td align="left"><a href="../downloads/uml/README.md">Ler a documentação</a></td>
+</tr>
+</tbody></table>
+<h3>Roteiro sugerido · 5 minutos</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Tempo</th>
+<th align="left">Foco</th>
+<th align="left">Mensagem principal</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>0:00–0:45</strong></td>
+<td align="left">Problema</td>
+<td align="left">O aluno pode chegar sem saber onde estacionar</td>
+</tr>
+<tr>
+<td align="left"><strong>0:45–1:30</strong></td>
+<td align="left">Proposta</td>
+<td align="left">Reunir vagas, custos e benefícios em uma experiência simples</td>
+</tr>
+<tr>
+<td align="left"><strong>1:30–3:00</strong></td>
+<td align="left">Demonstração</td>
+<td align="left">Percorrer as quatro telas do Figma e mostrar a maquete</td>
+</tr>
+<tr>
+<td align="left"><strong>3:00–4:00</strong></td>
+<td align="left">Diferenciais</td>
+<td align="left">Explicar planos e benefícios noturnos propostos</td>
+</tr>
+<tr>
+<td align="left"><strong>4:00–5:00</strong></td>
+<td align="left">Escopo e próximos passos</td>
+<td align="left">Apresentar os limites da demonstração e a necessidade de validação</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>Sugestão de abertura:</strong> “Antes de chegar à aula, o estudante já precisa tomar uma decisão: onde vai estacionar? O UDF Parking começa a resolver essa incerteza antes mesmo de ele sair.”</p>
+</blockquote>
+<h2>O que está demonstrado — e o que ainda é proposta</h2>
+<table>
+<thead>
+<tr>
+<th align="left">Situação</th>
+<th align="left">Escopo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Demonstrado</strong></td>
+<td align="left">Interface mobile, navegação entre telas, maquete interativa e disponibilidade simulada</td>
+</tr>
+<tr>
+<td align="left"><strong>Proposto</strong></td>
+<td align="left">Planos com desconto, benefícios noturnos e isenção noturna para mulheres</td>
+</tr>
+<tr>
+<td align="left"><strong>Próximos passos</strong></td>
+<td align="left">Validar a experiência com estudantes, avaliar viabilidade com os responsáveis e estudar a obtenção de dados reais</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>[!IMPORTANT]
+<strong>Este é um projeto acadêmico.</strong> Ocupação, preços e percursos apresentados são demonstrativos. O protótipo não realiza reservas, pagamentos ou monitoramento real do estacionamento. Os valores exibidos não são uma tabela oficial da UDF.</p>
+</blockquote>
+<h2>Equipe</h2>
+<p><a href="https://github.com/anahonorato">Ana Luísa</a> ·
+<a href="https://github.com/RufinoX12">Gabriel Rufino</a> ·
+<a href="https://github.com/jhonwayne07">João Paulo Ribeiro</a> ·
+<a href="https://github.com/pietroviannadeveloper">Pietro Vianna</a> ·
+<a href="https://github.com/Derikcrash">Derik Noronha</a> ·
+<a href="https://github.com/mhenriqueazevedo-create">Matheus Henrique</a></p>
+<hr>
+<div align="center">
+
+<p><strong>UDF Parking</strong><br>Planejar a chegada. Cuidar do caminho.</p>
+<p><a href="../downloads/README.md">Voltar ao repositório</a></p>
+</div>
+
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

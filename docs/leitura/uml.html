@@ -1,0 +1,175 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Atividades e objetos · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/uml/README.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/uml/README.md">Ver no GitHub</a></div><article class="prose"><h1>Modelagem UML do UDF Parking</h1>
+<h2>Objetivo e escopo</h2>
+<p>Esta atividade aplica diagramas de atividades e de objetos à consulta de vagas do protótipo UDF Parking. A análise considera o código do protótipo mantido em <code>pietroviannadeveloper/Analise_Projeto_Sistemas_UDF</code>, na branch <code>main</code> no commit <code>a94302f53d806430689acca67c7c80c49836d08e</code>, consultado em 05/11/2026.</p>
+<p>O sistema permite alternar entre os campi Sede e 4R, consultar setores e vagas, acompanhar a simulação de veículos, comparar planos e visualizar propostas de benefícios noturnos. Também possui controles de câmera, modo noturno e modo daltônico. O processo escolhido é <strong>consultar a situação de uma vaga</strong>, existente na interface. Reservas, contratação, cobrança e dados reais de ocupação estão fora deste fluxo.</p>
+<h2>1. Diagrama de Atividades</h2>
+<p>Representa o comportamento de um processo, mostrando ações, sequência de execução e caminhos condicionais.</p>
+<p><img src="../downloads/uml/atividades.svg" alt="Diagrama de Atividades: consulta de vaga"></p>
+<p><a href="../downloads/uml/atividades.puml">Arquivo editável PlantUML</a> · <a href="../downloads/uml/atividades.svg">Abrir SVG</a></p>
+<h3>Fluxo modelado</h3>
+<ol>
+<li>O estudante abre o protótipo e escolhe o campus. O campus Sede é o padrão, portanto mantê-lo também é uma escolha válida.</li>
+<li>O sistema carrega o conjunto de vagas simuladas correspondente.</li>
+<li>O estudante seleciona um setor e o sistema exibe suas vagas e disponibilidade.</li>
+<li>O estudante seleciona uma vaga pela grade. A maquete também permite selecionar diretamente uma vaga, como atalho fora do caminho detalhado neste diagrama.</li>
+<li>O sistema consulta o atributo <code>occupied</code> e exibe <strong>Livre</strong> ou <strong>Ocupada</strong>.</li>
+<li>Os caminhos alternativos se unem e a consulta termina. Nenhuma vaga é reservada.</li>
+</ol>
+<p>A propriedade <code>accessible</code> é uma informação complementar exibida nos detalhes. Uma vaga acessível pode estar livre ou ocupada, portanto não é uma terceira alternativa à decisão de ocupação. Atualizações automáticas da simulação são um processo independente, não detalhado aqui. O fim do diagrama encerra esta consulta, não o aplicativo.</p>
+<h3>Elementos e notação</h3>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Representação</th>
+<th>Uso no diagrama</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nó inicial</td>
+<td>Círculo preenchido</td>
+<td>Início da consulta</td>
+</tr>
+<tr>
+<td>Ação</td>
+<td>Retângulo com cantos arredondados</td>
+<td>Abrir, selecionar, carregar e exibir</td>
+</tr>
+<tr>
+<td>Fluxo de controle</td>
+<td>Linha com seta</td>
+<td>Ordem de execução</td>
+</tr>
+<tr>
+<td>Decisão</td>
+<td>Losango com uma entrada e duas saídas</td>
+<td>Verificar <code>occupied</code></td>
+</tr>
+<tr>
+<td>Guarda</td>
+<td>Condição entre colchetes</td>
+<td><code>[occupied = true]</code> e <code>[occupied = false]</code></td>
+</tr>
+<tr>
+<td>Mesclagem</td>
+<td>Losango com duas entradas e uma saída</td>
+<td>Reunir caminhos alternativos</td>
+</tr>
+<tr>
+<td>Nó final de atividade</td>
+<td>Círculo preenchido dentro de outro círculo</td>
+<td>Encerrar a consulta</td>
+</tr>
+</tbody></table>
+<p>As guardas são mutuamente exclusivas e cobrem os dois valores booleanos. Não há barras de fork/join porque este fluxo não modela ações paralelas. O losango após as alternativas é uma mesclagem, não uma sincronização.</p>
+<h2>2. Diagrama de Objetos</h2>
+<p>Representa instâncias concretas e seus valores em um instante específico, com links entre essas instâncias. Diferentemente de um diagrama de classes, mostra um exemplo de estado, não uma definição geral de todos os tipos do sistema.</p>
+<p><img src="../downloads/uml/objetos.svg" alt="Diagrama de Objetos: consulta no campus Sede"></p>
+<p><a href="../downloads/uml/objetos.puml">Arquivo editável PlantUML</a> · <a href="../downloads/uml/objetos.svg">Abrir SVG</a></p>
+<h3>Cenário representado</h3>
+<p>O estudante está no campus Sede, com a simulação pausada, o setor A selecionado e os detalhes da vaga A-01 abertos. No instantâneo, A-01 está livre e é acessível. A-19 está ocupada e não é acessível. Esses valores de ocupação e acessibilidade correspondem ao conjunto inicial definido por <code>sedeSpaces()</code> antes das movimentações. Trata-se de um cenário ilustrativo possível, não de dados reais coletados.</p>
+<p>O desenho é um recorte parcial: o setor A possui 24 vagas no protótipo, mas apenas duas aparecem. Os setores B e V e as demais vagas foram omitidos para facilitar a leitura. A comparação entre A-01 e A-19 evidencia valores diferentes do mesmo tipo de objeto.</p>
+<h3>Objetos, atributos e relacionamentos</h3>
+<table>
+<thead>
+<tr>
+<th>Instância</th>
+<th>Tipo conceitual</th>
+<th>Papel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>consulta1</code></td>
+<td><code>ConsultaVaga</code></td>
+<td>Estado da consulta na interface</td>
+</tr>
+<tr>
+<td><code>sede</code></td>
+<td><code>Campus</code></td>
+<td>Campus selecionado</td>
+</tr>
+<tr>
+<td><code>setorA</code></td>
+<td><code>Setor</code></td>
+<td>Agrupamento das vagas consultadas</td>
+</tr>
+<tr>
+<td><code>vagaA01</code></td>
+<td><code>Vaga</code></td>
+<td>Vaga selecionada, livre e acessível</td>
+</tr>
+<tr>
+<td><code>vagaA19</code></td>
+<td><code>Vaga</code></td>
+<td>Outra vaga do mesmo setor, ocupada</td>
+</tr>
+</tbody></table>
+<p>Os cabeçalhos usam <code>nomeDaInstancia : Tipo</code> sublinhado. Os compartimentos mostram slots na forma <code>atributo = valor</code>. Textos aparecem entre aspas e booleanos usam <code>true</code>/<code>false</code>. As linhas contínuas sem setas são <strong>links entre instâncias</strong>, rotulados com o significado da associação. Não representam herança nem sequência de ações. Não foram adicionadas multiplicidades de classes a esse instantâneo.</p>
+<h3>Correspondência com a implementação</h3>
+<p>Esta é uma modelagem conceitual do estado do protótipo, não uma alegação de que existem classes TypeScript com esses nomes ou um banco de dados implementado.</p>
+<table>
+<thead>
+<tr>
+<th>Modelo</th>
+<th>Correspondência no código</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Campus</code></td>
+<td><code>CampusId</code>, valores <code>sede</code> e <code>4r</code>, e estado React <code>campus</code></td>
+</tr>
+<tr>
+<td><code>Setor</code></td>
+<td>Itens de <code>sectors</code> em <code>app/page.tsx</code> e campo <code>sector</code> de cada vaga</td>
+</tr>
+<tr>
+<td><code>Vaga</code></td>
+<td>Tipo TypeScript <code>Space</code> em <code>app/scene.tsx</code></td>
+</tr>
+<tr>
+<td><code>id</code>, <code>occupied</code>, <code>accessible</code></td>
+<td>Campos efetivos de <code>Space</code></td>
+</tr>
+<tr>
+<td><code>ConsultaVaga</code></td>
+<td>Agrupamento conceitual dos estados React da interface</td>
+</tr>
+<tr>
+<td><code>setorSelecionado</code></td>
+<td>Estado <code>selected</code></td>
+</tr>
+<tr>
+<td><code>vagaSelecionada</code></td>
+<td>Estado <code>space</code></td>
+</tr>
+<tr>
+<td><code>simulacaoAtiva</code></td>
+<td>Estado <code>playing</code></td>
+</tr>
+<tr>
+<td>Links entre objetos</td>
+<td>Relações por identificadores, seleção e agrupamento, não necessariamente referências diretas em memória</td>
+</tr>
+</tbody></table>
+<p>Os atributos gráficos <code>x</code>, <code>z</code>, <code>rotation</code> e <code>lane</code> não aparecem porque não são necessários para explicar a consulta de disponibilidade.</p>
+<h2>3. Revisão dos diagramas</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Processo e cenário correspondem a funcionalidades presentes no protótipo.</li>
+<li><input checked="" disabled="" type="checkbox"> Atividades têm início, sequência, decisão, guardas, mesclagem e fim.</li>
+<li><input checked="" disabled="" type="checkbox"> A decisão cobre os dois estados possíveis de ocupação.</li>
+<li><input checked="" disabled="" type="checkbox"> Objetos têm identidade, tipo, atributos e valores concretos.</li>
+<li><input checked="" disabled="" type="checkbox"> Cabeçalhos das instâncias estão sublinhados no SVG.</li>
+<li><input checked="" disabled="" type="checkbox"> Links conectam objetos existentes e possuem significado explícito.</li>
+<li><input checked="" disabled="" type="checkbox"> Acessibilidade e ocupação são propriedades independentes.</li>
+<li><input checked="" disabled="" type="checkbox"> O recorte parcial e a natureza conceitual da modelagem estão documentados.</li>
+<li><input checked="" disabled="" type="checkbox"> O fluxo não cria reservas nem apresenta simulação como dado real.</li>
+</ul>
+<h2>4. Arquivos e manutenção</h2>
+<p>Os SVGs permitem visualizar os diagramas diretamente neste README. Os arquivos <code>.puml</code> contêm a versão textual editável em PlantUML. Ambos representam os mesmos elementos e relações, com disposição gráfica independente. Ao modificar a modelagem, mantenha as duas versões sincronizadas. A renderização PlantUML pode variar conforme a versão da ferramenta.</p>
+<h2>Referências</h2>
+<ul>
+<li>OBJECT MANAGEMENT GROUP. <strong>OMG Unified Modeling Language, versão 2.5.1</strong>. 2017. <a href="https://www.omg.org/spec/UML/2.5.1">Especificação oficial</a>. Acesso em: 5 nov. 2026. Seções sobre InstanceSpecification e Activities.</li>
+<li><a href="https://github.com/pietroviannadeveloper/Analise_Projeto_Sistemas_UDF/blob/a94302f53d806430689acca67c7c80c49836d08e/app/page.tsx">Código analisado: app/page.tsx</a>.</li>
+<li><a href="https://github.com/pietroviannadeveloper/Analise_Projeto_Sistemas_UDF/blob/a94302f53d806430689acca67c7c80c49836d08e/app/scene.tsx">Código analisado: app/scene.tsx</a>.</li>
+</ul>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

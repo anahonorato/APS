@@ -1,0 +1,417 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Por dentro da maquete · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/ProjetoAPS/Maquete3D/Projeto3D.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/ProjetoAPS/Maquete3D/Projeto3D.md">Ver no GitHub</a></div><aside class="notice">Este guia preserva o registro original da maquete. Para obter o código e conferir instruções atuais de execução, consulte <a href="https://github.com/pietroviannadeveloper/Analise_Projeto_Sistemas_UDF">o repositório da aplicação</a>. O repositório APS concentra a documentação.</aside><article class="prose"><h1>🅿️ UDF Parking — Campus 3D</h1>
+<p align="center">
+  <strong>Protótipo interativo para visualização, planejamento e simulação do estacionamento universitário.</strong>
+</p>
+
+<p align="center">
+  Engenharia de Software · Análise e Projeto de Sistemas — UDF
+</p>
+
+<p align="center">
+  <a href="https://udf-parking.vercel.app/">
+    <strong>🌐 Acessar o protótipo publicado</strong>
+  </a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/anahonorato/APS">
+    <strong>📂 Repositório</strong>
+  </a>
+</p>
+
+<hr>
+<h2>📌 Sobre o projeto</h2>
+<p>O <strong>UDF Parking — Campus 3D</strong> é uma prova de conceito desenvolvida para investigar como uma experiência visual e interativa pode facilitar o planejamento do uso do estacionamento universitário.</p>
+<p>A solução combina uma <strong>Recriação fictícia demaquete 3D do campus</strong> com informações simuladas sobre:</p>
+<ul>
+<li>disponibilidade de vagas;</li>
+<li>planos de estacionamento;</li>
+<li>custos de utilização;</li>
+<li>benefícios noturnos;</li>
+<li>segurança no estacionamento.</li>
+</ul>
+<p>O projeto aplica conceitos de <strong>Análise e Projeto de Sistemas</strong>, desenvolvimento front-end, modelagem 3D e experiência do usuário em uma interface responsiva e interativa.</p>
+<blockquote>
+<p>[!IMPORTANT]
+Este é um <strong>protótipo acadêmico</strong>.
+As vagas, preços, percursos e benefícios apresentados são demonstrativos.</p>
+<p>O sistema <strong>não realiza reservas, pagamentos, monitoramento por sensores ou consulta de dados reais de ocupação</strong>.</p>
+</blockquote>
+<hr>
+<h2>🎯 Problema</h2>
+<p>A incerteza sobre a disponibilidade de vagas pode dificultar o planejamento da ida à universidade.</p>
+<p>Para usuários frequentes, o pagamento diário também pode representar um custo elevado ao longo do mês.</p>
+<p>Durante o período noturno, além da disponibilidade de vagas, fatores relacionados à <strong>segurança e previsibilidade do deslocamento</strong> também se tornam relevantes.</p>
+<hr>
+<h2>💡 Proposta de solução</h2>
+<p>O protótipo apresenta uma experiência centralizada que permite:</p>
+<ul>
+<li>🚗 consultar visualmente vagas disponíveis;</li>
+<li>💳 comparar planos de estacionamento;</li>
+<li>📉 visualizar descontos progressivos;</li>
+<li>🌙 consultar benefícios para utilização no período noturno;</li>
+<li>👩 visualizar a proposta de isenção noturna para mulheres;</li>
+<li>🛡️ acompanhar um percurso ilustrativo de segurança dentro do estacionamento.</li>
+</ul>
+<hr>
+<h2>✨ Funcionalidades</h2>
+<h3>🏫 Campus 3D</h3>
+<ul>
+<li>Maquete tridimensional interativa;</li>
+<li>rotação da câmera;</li>
+<li>zoom;</li>
+<li>passeio automático;</li>
+<li>foco por setor;</li>
+<li>seleção de vagas diretamente pela cena.</li>
+</ul>
+<h3>🅿️ Estacionamento</h3>
+<ul>
+<li><strong>72 vagas demonstrativas</strong>;</li>
+<li>divisão entre os setores <strong>A</strong>, <strong>B</strong> e <strong>Visitantes</strong>;</li>
+<li>seleção pela maquete 3D;</li>
+<li>seleção por grade de vagas;</li>
+<li>indicação visual de disponibilidade.</li>
+</ul>
+<h3>📊 Simulação de ocupação</h3>
+<ul>
+<li>atualização dinâmica das vagas;</li>
+<li>contadores de ocupação;</li>
+<li>alteração visual em tempo real;</li>
+<li>possibilidade de pausar a simulação.</li>
+</ul>
+<h3>💰 Comparação de planos</h3>
+<p>O usuário pode informar sua frequência estimada de utilização mensal e comparar diferentes opções:</p>
+<ul>
+<li>plano mensal;</li>
+<li>plano bimestral;</li>
+<li>plano semestral;</li>
+<li>utilização avulsa.</li>
+</ul>
+<h3>🌙 Modo Dia e Noite</h3>
+<p>A interface permite alternar entre diferentes condições de iluminação.</p>
+<p>No modo noturno são modificados:</p>
+<ul>
+<li>iluminação da cena;</li>
+<li>materiais;</li>
+<li>aparência do campus;</li>
+<li>elementos relacionados à proposta de segurança.</li>
+</ul>
+<h3>🛡️ Segurança</h3>
+<p>A aba de segurança apresenta:</p>
+<ul>
+<li>percurso ilustrativo dentro do estacionamento;</li>
+<li>pontos de referência;</li>
+<li>benefícios noturnos propostos;</li>
+<li>destaque para iniciativas voltadas à segurança dos estudantes.</li>
+</ul>
+<h3>♿ Acessibilidade e compatibilidade</h3>
+<ul>
+<li>Layout responsivo;</li>
+<li>suporte a diferentes tamanhos de tela;</li>
+<li>suporte à preferência <code>prefers-reduced-motion</code>;</li>
+<li>renderização alternativa em <strong>Canvas 2D</strong> quando WebGL não estiver disponível.</li>
+</ul>
+<hr>
+<h2>🎮 Como utilizar</h2>
+<p>Na página principal:</p>
+<ol>
+<li>🖱️ Explore o campus utilizando o mouse ou toque;</li>
+<li>🅿️ selecione uma vaga na maquete 3D ou na grade;</li>
+<li>☀️🌙 alterne entre os modos <strong>Dia</strong> e <strong>Noite</strong>;</li>
+<li>🚘 execute a simulação de ocupação;</li>
+<li>📅 informe sua frequência mensal de utilização;</li>
+<li>💰 compare os planos disponíveis;</li>
+<li>🛡️ acesse a área de segurança e benefícios noturnos.</li>
+</ol>
+<hr>
+<h2>🛠️ Tecnologias utilizadas</h2>
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Aplicação</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Next.js 16</strong></td>
+<td>Estrutura principal da aplicação</td>
+</tr>
+<tr>
+<td><strong>React 19</strong></td>
+<td>Construção da interface interativa</td>
+</tr>
+<tr>
+<td><strong>TypeScript</strong></td>
+<td>Tipagem e organização da lógica</td>
+</tr>
+<tr>
+<td><strong>Three.js</strong></td>
+<td>Construção e renderização da maquete 3D</td>
+</tr>
+<tr>
+<td><strong>WebGL</strong></td>
+<td>Renderização gráfica acelerada</td>
+</tr>
+<tr>
+<td><strong>Canvas 2D</strong></td>
+<td>Fallback para ambientes sem WebGL</td>
+</tr>
+<tr>
+<td><strong>Tailwind CSS 4</strong></td>
+<td>Estilização e layout</td>
+</tr>
+<tr>
+<td><strong>CSS</strong></td>
+<td>Estados visuais e ajustes específicos</td>
+</tr>
+<tr>
+<td><strong>shadcn/ui</strong></td>
+<td>Componentes e primitivas de interface</td>
+</tr>
+<tr>
+<td><strong>Lucide React</strong></td>
+<td>Ícones utilizados na aplicação</td>
+</tr>
+<tr>
+<td><strong>Figma</strong></td>
+<td>Prototipação e referência visual</td>
+</tr>
+<tr>
+<td><strong>Vercel</strong></td>
+<td>Hospedagem e publicação</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>🧊 Construção da maquete 3D</h2>
+<p>A maquete foi construída diretamente em código utilizando <strong>Three.js</strong>.</p>
+<p>As diferentes partes do campus são representadas através de geometrias tridimensionais, incluindo:</p>
+<ul>
+<li>prédios;</li>
+<li>telhados;</li>
+<li>janelas;</li>
+<li>vias;</li>
+<li>árvores;</li>
+<li>postes;</li>
+<li>veículos;</li>
+<li>vagas de estacionamento.</li>
+</ul>
+<p>Os objetos da cena são organizados individualmente para permitir interações e atualizações durante a execução da aplicação.</p>
+<hr>
+<h3>🎥 Câmera e navegação</h3>
+<p>A aplicação utiliza uma câmera em perspectiva combinada com <code>OrbitControls</code>.</p>
+<p>Isso permite:</p>
+<ul>
+<li>rotação ao redor da maquete;</li>
+<li>aproximação e afastamento;</li>
+<li>alteração do ponto de observação;</li>
+<li>navegação livre pelo cenário.</li>
+</ul>
+<hr>
+<h3>🎯 Seleção de vagas</h3>
+<p>A interação com objetos utiliza <strong>raycasting</strong>.</p>
+<p>A posição do cursor é convertida para as coordenadas da cena 3D, permitindo identificar qual objeto foi selecionado pelo usuário.</p>
+<p>Esse mecanismo possibilita selecionar diretamente:</p>
+<ul>
+<li>vagas;</li>
+<li>veículos;</li>
+<li>elementos interativos da cena.</li>
+</ul>
+<hr>
+<h3>🎞️ Sistema de animação</h3>
+<p>O ciclo de renderização utiliza:</p>
+<pre><code class="language-javascript">requestAnimationFrame()
+</code></pre>
+<p>Ele é responsável por atualizar continuamente:</p>
+<ul>
+<li>câmera;</li>
+<li>veículos;</li>
+<li>animações;</li>
+<li>estados da simulação;</li>
+<li>transições visuais.</li>
+</ul>
+<hr>
+<h3>🌙 Iluminação dinâmica</h3>
+<p>Os modos <strong>Dia</strong> e <strong>Noite</strong> alteram propriedades da cena, incluindo:</p>
+<ul>
+<li>intensidade das luzes;</li>
+<li>materiais;</li>
+<li>cores;</li>
+<li>aparência geral do ambiente.</li>
+</ul>
+<p>No modo noturno, elementos relacionados ao percurso de segurança recebem maior destaque visual.</p>
+<hr>
+<h3>🖼️ Fallback em Canvas 2D</h3>
+<p>Caso o navegador não consiga inicializar o <strong>WebGL</strong>, a aplicação utiliza um renderizador alternativo baseado em <strong>Canvas 2D</strong>.</p>
+<p>As geometrias da cena são projetadas em duas dimensões para manter uma representação funcional do estacionamento.</p>
+<p>O renderizador:</p>
+<ul>
+<li>acompanha automaticamente o tamanho do contêiner;</li>
+<li>mantém uma representação visual da cena;</li>
+<li>libera recursos gráficos durante a desmontagem dos componentes.</li>
+</ul>
+<hr>
+<h2>🗂️ Estrutura principal</h2>
+<pre><code class="language-text">Projeto3D/
+│
+├── app/
+│   ├── page.tsx
+│   ├── scene.tsx
+│   ├── software-renderer.ts
+│   └── parking.css
+│
+├── components/
+│   └── ui/
+│
+├── public/
+│
+├── package.json
+├── tsconfig.json
+└── vercel.json
+</code></pre>
+<h3>Responsabilidade dos principais arquivos</h3>
+<table>
+<thead>
+<tr>
+<th>Arquivo / Diretório</th>
+<th>Responsabilidade</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>app/page.tsx</code></td>
+<td>Interface principal, vagas, simulação e cálculo dos planos</td>
+</tr>
+<tr>
+<td><code>app/scene.tsx</code></td>
+<td>Construção e interação da cena Three.js</td>
+</tr>
+<tr>
+<td><code>app/software-renderer.ts</code></td>
+<td>Renderização alternativa em Canvas 2D</td>
+</tr>
+<tr>
+<td><code>app/parking.css</code></td>
+<td>Identidade visual, estados e responsividade</td>
+</tr>
+<tr>
+<td><code>components/ui/</code></td>
+<td>Componentes reutilizáveis da interface</td>
+</tr>
+<tr>
+<td><code>vercel.json</code></td>
+<td>Configuração de publicação na Vercel</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>⚙️ Requisitos</h2>
+<p>Para executar o projeto localmente:</p>
+<ul>
+<li><strong>Node.js 22.13</strong> ou superior;</li>
+<li><strong>npm</strong>;</li>
+<li>navegador moderno;</li>
+<li>suporte a WebGL recomendado.</li>
+</ul>
+<blockquote>
+<p>Caso WebGL não esteja disponível, o projeto utiliza automaticamente sua alternativa em Canvas 2D.</p>
+</blockquote>
+<hr>
+<h2>🚀 Executando localmente</h2>
+<h3>1. Clone o repositório</h3>
+<pre><code class="language-bash">git clone https://github.com/anahonorato/APS.git
+</code></pre>
+<h3>2. Entre no projeto</h3>
+<pre><code class="language-bash">cd APS/Projeto3D
+</code></pre>
+<h3>3. Instale as dependências</h3>
+<pre><code class="language-bash">npm install
+</code></pre>
+<h3>4. Inicie o ambiente de desenvolvimento</h3>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<h3>5. Abra no navegador</h3>
+<pre><code class="language-text">http://localhost:3000
+</code></pre>
+<hr>
+<h2>📦 Executando a versão de produção</h2>
+<p>Gere a build otimizada:</p>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<p>Depois execute:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+<p>A aplicação estará disponível em:</p>
+<pre><code class="language-text">http://localhost:3000
+</code></pre>
+<hr>
+<h2>🔗 Links do projeto</h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🌐 <strong>Protótipo publicado</strong></td>
+<td><a href="https://udf-parking.vercel.app/">udf-parking.vercel.app</a></td>
+</tr>
+<tr>
+<td>💻 <strong>Repositório GitHub</strong></td>
+<td><a href="https://github.com/anahonorato/APS">github.com/anahonorato/APS</a></td>
+</tr>
+<tr>
+<td>🎨 <strong>Protótipo no Figma</strong></td>
+<td><a href="https://www.figma.com/design/8sZfS0XjwaMhVcZYGXSvJT/UDF-PARKING?node-id=0-1&p=f&t=noq3KyzZw545d4aB-0">Abrir no Figma</a></td>
+</tr>
+<tr>
+<td>🗺️ <strong>Board MoSCoW</strong></td>
+<td><a href="https://miro.com/welcomeonboard/Y2RxT2ZYT09JNHgzcTVMR096YklKbEVCSkdabXh5d2hpTU9xR0M2VGUzWGtJSytPOUEwK0R5VkVBb2k4ZmR6Nm8rclFYMm56RmxlcUQ2UjZkWjU3QlZRczg2eVFCcHdMdFpkNkhUcjBrenBjdEFDODRVZk95eXZmWDZURWlwbS90R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=66753103227">Acessar o Board do projeto no Miro</a></td>
+</tr>
+</tbody></table>
+<hr>
+<h2>📚 Escopo e limitações</h2>
+<p>O <strong>UDF Parking — Campus 3D</strong> representa uma solução conceitual e não possui integração com a infraestrutura real do estacionamento da UDF.</p>
+<p>Os dados exibidos são exclusivamente demonstrativos e não devem ser utilizados para decisões reais relacionadas a:</p>
+<ul>
+<li>disponibilidade de vagas;</li>
+<li>pagamentos;</li>
+<li>deslocamento;</li>
+<li>segurança;</li>
+<li>acesso ao campus.</li>
+</ul>
+<hr>
+<h2>🔮 Possíveis evoluções</h2>
+<p>Como continuação do projeto, a solução poderia incorporar:</p>
+<ul>
+<li>📡 sensores de ocupação em tempo real;</li>
+<li>🔌 API de disponibilidade de vagas;</li>
+<li>👤 autenticação de usuários;</li>
+<li>📲 aplicativo mobile;</li>
+<li>🎫 reserva antecipada de vagas;</li>
+<li>💳 pagamentos digitais;</li>
+<li>🔔 notificações de disponibilidade;</li>
+<li>♿ dados oficiais de vagas acessíveis;</li>
+<li>🛡️ integração com informações oficiais de segurança do campus;</li>
+<li>📊 histórico e análise de ocupação;</li>
+<li>🗺️ mapa mais detalhado do campus.</li>
+</ul>
+<hr>
+<h2>🎓 Contexto acadêmico</h2>
+<p>Projeto desenvolvido para a disciplina de <strong>Análise e Projeto de Sistemas</strong>, do curso de <strong>Engenharia de Software da UDF</strong>.</p>
+<p>O objetivo é aplicar conceitos relacionados a:</p>
+<ul>
+<li>levantamento de requisitos;</li>
+<li>definição de escopo;</li>
+<li>prototipação;</li>
+<li>priorização de funcionalidades;</li>
+<li>experiência do usuário;</li>
+<li>modelagem de sistemas;</li>
+<li>desenvolvimento de interfaces.</li>
+</ul>
+<hr>
+<h2>📄 Licença</h2>
+<p>Este projeto foi desenvolvido para <strong>fins acadêmicos</strong>.</p>
+<p>Consulte os responsáveis pelo repositório antes de reutilizar código, modelos, elementos gráficos ou materiais visuais em outros projetos.</p>
+<hr>
+<p align="center">
+  <strong>UDF Parking — Campus 3D</strong><br>
+  Engenharia de Software · UDF
+</p>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

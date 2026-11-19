@@ -1,0 +1,33 @@
+@startuml
+skinparam shadowing false
+title UDF Parking - Instantâneo ilustrativo do campus Sede
+object "consulta1 : ConsultaVaga" as consulta1 {
+ campus = "sede"
+ setorSelecionado = "A"
+ vagaSelecionada = "A-01"
+ simulacaoAtiva = false
+}
+object "sede : Campus" as sede {
+ id = "sede"
+ nome = "Campus Sede"
+}
+object "setorA : Setor" as setorA {
+ id = "A"
+ nome = "Setor A"
+}
+object "vagaA01 : Vaga" as vagaA01 {
+ id = "A-01"
+ occupied = false
+ accessible = true
+}
+object "vagaA19 : Vaga" as vagaA19 {
+ id = "A-19"
+ occupied = true
+ accessible = false
+}
+consulta1 -- sede : consulta campus
+sede -- setorA : contém
+setorA -- vagaA01 : contém
+setorA -- vagaA19 : contém
+consulta1 -- vagaA01 : seleciona
+@enduml

@@ -1,0 +1,169 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Requisitos do sistema · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/ProjetoAPS/Docs_Requisitos/Ficha-Elicita%C3%A7%C3%A3o-REQ-001.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/ProjetoAPS/Docs_Requisitos/Ficha-Elicita%C3%A7%C3%A3o-REQ-001.md">Ver no GitHub</a></div><article class="prose"><h1>Ficha de Elicitação de Requisitos</h1>
+<p><strong>Curso:</strong> Engenharia de Software<br><strong>Disciplina:</strong> Análise e Projeto de Sistemas<br><strong>Instituição:</strong> UDF Centro Universitário<br><strong>Grupo/integrantes:</strong>  <a href="https://github.com/anahonorato">Ana Luísa</a>, | <a href="https://github.com/RufinoX12">Gabriel Rufino</a>, | <a href="https://github.com/jhonwayne07">João Paulo Ribeiro</a> |
+<a href="https://github.com/pietroviannadeveloper">Pietro Vianna</a> |
+<a href="https://github.com/Derikcrash">Derik Noronha</a> |
+<a href="https://github.com/mhenriqueazevedo-create">Matheus Henrique</a> |</p>
+<p><strong>Turma:</strong> D2 - Engenharia de Software  <strong>Data:</strong> 24/09/2026  <strong>Versão:</strong> 1.0</p>
+<h2>1. Identificação do projeto</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Preenchimento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nome do projeto</td>
+<td>UDF Parking — Sistema de Apoio ao Estacionamento da UDF</td>
+</tr>
+<tr>
+<td>Objetivo do projeto</td>
+<td>Os estudantes da UDF não conseguem saber antecipadamente se existem vagas no estacionamento, o que causa atrasos, perda de tempo, circulação desnecessária e a necessidade de estacionar longe da instituição. Além disso, o pagamento é feito por diária, sem planos adequados para usuários frequentes, e estacionar longe à noite aumenta a exposição de homens e mulheres no trajeto a pé. <strong>Resultado esperado:</strong> facilitar o planejamento do deslocamento, oferecendo informações sobre vagas, preços, planos e benefícios, para reduzir atrasos e custos e tornar os deslocamentos mais seguros, especialmente no período noturno.</td>
+</tr>
+<tr>
+<td>Contexto e escopo</td>
+<td>Sistema que permite ao estudante consultar a disponibilidade de vagas do estacionamento da UDF antes de se deslocar, reunindo também preços, horários, descontos noturnos, planos mensal, bimestral e semestral e a proposta de isenção noturna para mulheres. Nesta etapa, o trabalho se concentra na análise do problema e dos requisitos: não estão incluídos sensores, APIs, cancelas nem o desenvolvimento completo do sistema.</td>
+</tr>
+</tbody></table>
+<h2>2. Stakeholder e fonte</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Preenchimento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stakeholder (nome ou papel)</td>
+<td>ST01 — Alunos da UDF que utilizam carro, principalmente no período noturno (stakeholder principal).</td>
+</tr>
+<tr>
+<td>Relação com o projeto</td>
+<td>Usuário principal: são os diretamente afetados pela falta de informação sobre vagas, pelo pagamento recorrente de diárias e pela exposição ao estacionar longe da instituição à noite. Influência: alta.</td>
+</tr>
+<tr>
+<td>Contato ou setor (se aplicável)</td>
+<td>Corpo discente da UDF (estudantes que vão de carro; ênfase no período noturno).</td>
+</tr>
+<tr>
+<td>Técnica e data da elicitação</td>
+<td>Observação do problema; setembro de 2026.</td>
+</tr>
+<tr>
+<td>Responsável pelo registro</td>
+<td>Grupo do projeto (integrantes listados no cabeçalho).</td>
+</tr>
+</tbody></table>
+<h2>3. Requisito elicitado</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Preenchimento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ID do requisito</td>
+<td>REQ-001 (corresponde ao RF01 do levantamento do grupo).</td>
+</tr>
+<tr>
+<td>Necessidade relatada pelo stakeholder</td>
+<td>N01 — “Consultar vagas antes do deslocamento”: o estudante vai até a UDF sem saber se encontrará vaga e só descobre a lotação ao chegar ao estacionamento.</td>
+</tr>
+<tr>
+<td>Descrição consolidada</td>
+<td>O sistema deve permitir ao estudante consultar a disponibilidade de vagas do estacionamento da UDF antes de se deslocar até a instituição, sem que ele precise estar no local.</td>
+</tr>
+<tr>
+<td>Justificativa ou benefício esperado</td>
+<td>É a função central do sistema. Evita atrasos, perda de tempo procurando vaga, circulação desnecessária e a necessidade de estacionar longe da UDF, especialmente à noite.</td>
+</tr>
+<tr>
+<td>Tipo</td>
+<td>Funcional.</td>
+</tr>
+<tr>
+<td>Dependências ou dúvidas</td>
+<td>1) A fonte confiável dos dados de ocupação ainda não foi definida (RES03), e esta etapa não prevê sensores, APIs ou cancelas (RES01).<br>2) A frequência de atualização dos dados ainda precisa ser definida no estudo de viabilidade.<br>3) Os critérios de “muitas vagas”, “poucas vagas” e “lotado” dependem da gestão do estacionamento (ver RF02).<br>4) Ainda não está definido se a consulta exigirá login ou será aberta a todos (professores, funcionários e visitantes, ST05, também poderiam consultar).<br>5) Requisitos de qualidade relacionados: RQ01 (desempenho), RQ03 (usabilidade), RQ04 (última atualização) e RQ05 (compatibilidade).</td>
+</tr>
+</tbody></table>
+<h2>4. Regras de negócio</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Regra de negócio relacionada</th>
+<th>Fonte ou responsável pela validação</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RN-001</td>
+<td>A situação do estacionamento deve ser apresentada como “muitas vagas”, “poucas vagas” ou “lotado”, conforme critérios definidos pela gestão do estacionamento.</td>
+<td>Gestão do estacionamento (ST04)</td>
+</tr>
+</tbody></table>
+<h2>5. Prioridade</h2>
+<p><strong>Classificação MoSCoW (marque uma):</strong> [x] Must have (essencial)  [ ] Should have (importante)  [ ] Could have (desejável)  [ ] Won&#39;t have nesta versão (fora do escopo atual)</p>
+<p><strong>Justificativa da prioridade:</strong> Representa a função principal do sistema e é o primeiro item da primeira versão. Sem ela, o estudante continua descobrindo a lotação apenas ao chegar à UDF.</p>
+<h2>6. Critérios de aceitação</h2>
+<p>Escreva condições verificáveis que permitam decidir se o requisito foi atendido.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Dado/Quando</th>
+<th>Então (resultado esperado)</th>
+<th>Evidência ou forma de verificação</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CA-01</td>
+<td>Dado um estudante que ainda não chegou à UDF, quando ele acessar o sistema e solicitar a consulta de vagas</td>
+<td>Então o sistema apresenta a disponibilidade atual de vagas do estacionamento, sem exigir que o estudante esteja no local.</td>
+<td>Teste funcional com acesso externo à UDF, em computador e em celular.</td>
+</tr>
+<tr>
+<td>CA-02</td>
+<td>Dado um estudante que acabou de acessar o sistema, quando ele buscar a disponibilidade de vagas</td>
+<td>Então ele chega ao resultado em até três interações (RQ03).</td>
+<td>Teste de usabilidade com estudantes, contando as interações até o resultado.</td>
+</tr>
+<tr>
+<td>CA-03</td>
+<td>Dado o sistema em condições normais de uso, quando o estudante solicitar a consulta</td>
+<td>Então o resultado é exibido em até 2 segundos para 95% das requisições (RQ01).</td>
+<td>Teste de desempenho com medição do tempo de resposta.</td>
+</tr>
+<tr>
+<td>CA-04</td>
+<td>Dado que a consulta de vagas foi realizada, quando o resultado for exibido</td>
+<td>Então o sistema mostra também o horário da última atualização das informações de ocupação (RQ04).</td>
+<td>Comparação entre o horário exibido e o registro da última atualização dos dados.</td>
+</tr>
+</tbody></table>
+<h2>7. Validação e rastreabilidade</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Preenchimento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Situação</td>
+<td>[x] Pendente de validação  [ ] Validado  [ ] Necessita revisão</td>
+</tr>
+<tr>
+<td>Validado por / data</td>
+<td>Ainda não validado. A revisão por pares e a validação com o stakeholder estão pendentes.</td>
+</tr>
+<tr>
+<td>Observações e decisões</td>
+<td>Requisito classificado como Must have e incluído na primeira versão (ordem 1). Pendências levantadas na revisão: definir o intervalo de atualização dos dados (RQ04) e os percentuais de “muitas vagas / poucas vagas / lotado” (RF02).</td>
+</tr>
+<tr>
+<td>Links relacionados</td>
+<td>Rastreabilidade: N01 → ST01 → REQ-001 (RF01), relacionado a RF08, RQ01, RQ03, RQ04 e RQ05.<br><a href="https://miro.com/welcomeonboard/Y2RxT2ZYT09JNHgzcTVMR096YklKbEVCSkdabXh5d2hpTU9xR0M2VGUzWGtJSytPOUEwK0R5VkVBb2k4ZmR6Nm8rclFYMm56RmxlcUQ2UjZkWjU3QlZRczg2eVFCcHdMdFpkNkhUcjBrenBjdEFDODRVZk95eXZmWDZURWlwbS90R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=66753103227">Board do projeto no Miro</a><br><a href="https://github.com/anahonorato/APS">Repositório GitHub — APS</a></td>
+</tr>
+</tbody></table>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

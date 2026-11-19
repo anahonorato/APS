@@ -1,0 +1,452 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Atividade da Unidade 2 · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/Unidade2/Atividade.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/Unidade2/Atividade.md">Ver no GitHub</a></div><article class="prose"><p>20/08/2026
+-&gt; Introdução à Análise e Projeto de Sistemas de Informação. 
+-&gt; Conceitos e elementos fundamentais da engenharia de software - definição, características e tipos de modelagens. Ferramentas Case de apoio ao desenho dos diagramas UML</p>
+<h1>Ficha de Requisitos — Aula 02</h1>
+<h2>Análise e Projeto de Sistemas</h2>
+<p><strong>Unidade:</strong> II — Introdução à Análise e Projeto de Sistemas<br><strong>Atividade:</strong> Transformação do levantamento do sistema em requisitos funcionais e não funcionais<br><strong>Objetivo:</strong> Registrar, de forma estruturada, o que o sistema deve fazer e quais características de qualidade deve atender.</p>
+<hr>
+<h2>1. Identificação do Sistema</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Preenchimento</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Nome do sistema</td>
+<td>Sistema de Biblioteca</td>
+</tr>
+<tr>
+<td>Objetivo</td>
+<td>Gerenciar cadastro de usuários, livros, empréstimos, devoluções e multas.</td>
+</tr>
+<tr>
+<td>Público-alvo</td>
+<td>Alunos, bibliotecários e administradores.</td>
+</tr>
+<tr>
+<td>Responsável pelo levantamento</td>
+<td>Grupo de estudantes</td>
+</tr>
+<tr>
+<td>Versão</td>
+<td>1.0</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>2. Requisitos Funcionais</h1>
+<blockquote>
+<p>Requisitos funcionais descrevem <strong>funcionalidades ou serviços que o sistema deve oferecer</strong>.</p>
+</blockquote>
+<h2>RF01 — Cadastrar usuário</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF01</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve permitir que o bibliotecário cadastre usuários da biblioteca.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve permitir informar nome, matrícula, e-mail e telefone. 2. Deve impedir cadastro sem nome e matrícula. 3. Deve informar ao usuário quando o cadastro for concluído.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>O bibliotecário informa os dados de um aluno e seleciona <strong>Cadastrar</strong>. O sistema valida os dados e registra o novo usuário.</td>
+</tr>
+</tbody></table>
+<h2>RF02 — Cadastrar livro</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF02</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve permitir cadastrar livros disponíveis na biblioteca.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve permitir informar título, autor, ISBN e quantidade disponível. 2. Deve impedir o cadastro de livro sem título. 3. Deve apresentar confirmação após o cadastro.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>O bibliotecário cadastra o livro <em>Engenharia de Software</em>, informa autor e ISBN, e o sistema registra o exemplar.</td>
+</tr>
+</tbody></table>
+<h2>RF03 — Realizar empréstimo</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF03</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve permitir registrar o empréstimo de um livro para um usuário habilitado.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve verificar se o usuário está cadastrado. 2. Deve verificar a disponibilidade do livro. 3. Deve registrar usuário, livro, data do empréstimo e data prevista para devolução. 4. Deve atualizar a quantidade disponível.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>O bibliotecário seleciona o aluno e o livro. O sistema verifica a disponibilidade e registra o empréstimo.</td>
+</tr>
+</tbody></table>
+<h2>RF04 — Registrar devolução</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF04</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve permitir registrar a devolução de um livro emprestado.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve localizar o empréstimo. 2. Deve registrar a data de devolução. 3. Deve atualizar a disponibilidade do livro. 4. Deve verificar se houve atraso.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>O bibliotecário registra a devolução. O sistema atualiza o estoque e verifica se o prazo foi cumprido.</td>
+</tr>
+</tbody></table>
+<h2>RF05 — Calcular multa</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF05</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve calcular a multa quando um livro for devolvido após o prazo estabelecido.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Média</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve comparar a data prevista com a data efetiva de devolução. 2. Deve calcular o valor conforme a regra definida pela biblioteca. 3. Deve registrar a multa vinculada ao usuário.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Um livro deveria ser devolvido em 10/09 e foi devolvido em 13/09. O sistema identifica o atraso e calcula a multa correspondente.</td>
+</tr>
+</tbody></table>
+<h2>RF06 — Consultar disponibilidade de livro</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RF06</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve permitir consultar se determinado livro está disponível para empréstimo.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Média</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Deve permitir pesquisar por título, autor ou ISBN. 2. Deve informar a quantidade disponível. 3. Deve indicar quando não houver exemplares disponíveis.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>O usuário pesquisa um livro pelo título e o sistema informa que existem dois exemplares disponíveis.</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>3. Requisitos Não Funcionais</h1>
+<blockquote>
+<p>Requisitos não funcionais descrevem <strong>características, restrições e condições de qualidade</strong> que o sistema deve atender.</p>
+</blockquote>
+<h2>RNF01 — Segurança</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RNF01</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve controlar o acesso às funcionalidades conforme o perfil do usuário.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Usuários devem autenticar-se antes de acessar funções restritas. 2. Funcionalidades administrativas devem estar disponíveis somente a perfis autorizados.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Um aluno não pode acessar a funcionalidade de cadastro de livros, disponível ao bibliotecário.</td>
+</tr>
+</tbody></table>
+<h2>RNF02 — Usabilidade</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RNF02</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>A interface deve apresentar informações e comandos de forma clara e consistente.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Os campos devem possuir rótulos claros. 2. Mensagens de erro devem orientar o usuário. 3. As ações principais devem ser facilmente identificáveis.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Ao deixar a matrícula vazia, o sistema informa que o campo é obrigatório.</td>
+</tr>
+</tbody></table>
+<h2>RNF03 — Desempenho</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RNF03</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>Consultas comuns devem apresentar resposta em tempo adequado para o uso cotidiano.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Média</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>Em condições normais de operação, consultas simples devem apresentar o resultado em até 3 segundos.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Ao pesquisar um livro pelo título, o resultado deve ser apresentado em até 3 segundos.</td>
+</tr>
+</tbody></table>
+<h2>RNF04 — Disponibilidade</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RNF04</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve estar disponível durante o horário de funcionamento da biblioteca.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>O sistema deve permanecer acessível durante o período definido pela instituição, exceto em manutenções previamente programadas.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Durante o horário de atendimento, o bibliotecário consegue realizar empréstimos sem indisponibilidade não planejada.</td>
+</tr>
+</tbody></table>
+<h2>RNF05 — Integridade dos dados</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Identificação</strong></td>
+<td>RNF05</td>
+</tr>
+<tr>
+<td><strong>Descrição</strong></td>
+<td>O sistema deve preservar a consistência dos dados registrados.</td>
+</tr>
+<tr>
+<td><strong>Prioridade</strong></td>
+<td>Alta</td>
+</tr>
+<tr>
+<td><strong>Critérios de aceitação</strong></td>
+<td>1. Não deve permitir empréstimo de livro inexistente. 2. Não deve permitir quantidade de exemplares negativa. 3. Um empréstimo deve estar associado a usuário e livro válidos.</td>
+</tr>
+<tr>
+<td><strong>Exemplo</strong></td>
+<td>Ao tentar emprestar um livro sem exemplares disponíveis, o sistema bloqueia a operação e informa o motivo.</td>
+</tr>
+</tbody></table>
+<hr>
+<h1>4. Modelo para preenchimento pelos estudantes</h1>
+<h2>Requisito Funcional</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Resposta do grupo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identificação</td>
+<td>RF__</td>
+</tr>
+<tr>
+<td>Descrição</td>
+<td></td>
+</tr>
+<tr>
+<td>Prioridade</td>
+<td>Alta / Média / Baixa</td>
+</tr>
+<tr>
+<td>Critérios de aceitação</td>
+<td></td>
+</tr>
+<tr>
+<td>Exemplo</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Requisito Não Funcional</h2>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Resposta do grupo</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Identificação</td>
+<td>RNF__</td>
+</tr>
+<tr>
+<td>Descrição</td>
+<td></td>
+</tr>
+<tr>
+<td>Prioridade</td>
+<td>Alta / Média / Baixa</td>
+</tr>
+<tr>
+<td>Critérios de aceitação</td>
+<td></td>
+</tr>
+<tr>
+<td>Exemplo</td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h1>5. Orientações para elaboração</h1>
+<p>Para cada requisito, o grupo deve verificar:</p>
+<ul>
+<li><strong>Identificação:</strong> possui código único?</li>
+<li><strong>Descrição:</strong> está claro o que o sistema deve fazer ou qual característica deve apresentar?</li>
+<li><strong>Prioridade:</strong> é essencial, importante ou pode ser implementado posteriormente?</li>
+<li><strong>Critérios de aceitação:</strong> é possível verificar objetivamente se o requisito foi atendido?</li>
+<li><strong>Exemplo:</strong> existe uma situação concreta que demonstra o requisito?</li>
+</ul>
+<h2>Regra prática</h2>
+<p>Um bom requisito deve ser:</p>
+<p><strong>Claro + específico + verificável + relevante</strong></p>
+<hr>
+<h1>6. Entregável da atividade</h1>
+<p>O grupo deverá entregar:</p>
+<ol>
+<li>Identificação do sistema;</li>
+<li>Pelo menos <strong>5 requisitos funcionais</strong>;</li>
+<li>Pelo menos <strong>3 requisitos não funcionais</strong>;</li>
+<li>Prioridade de cada requisito;</li>
+<li>Critérios de aceitação;</li>
+<li>Exemplo de utilização;</li>
+<li>Identificação dos integrantes do grupo.</li>
+</ol>
+<p><strong>Próxima etapa:</strong> os requisitos produzidos nesta ficha servirão de base para a identificação e especificação dos <strong>casos de uso</strong>.</p>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>

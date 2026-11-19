@@ -1,0 +1,128 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#112e40"><title>Visão geral do projeto · UDF Parking</title><meta name="description" content="Portal do projeto UDF Parking: documentação, diagramas UML, protótipos, apresentação e equipe."><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/style.css"></head><body class="reader"><header><a class="logo" href="../index.html" aria-label="UDF Parking início"><span class="monogram">P<span></span></span><strong>UDF<span>parking</span></strong></a><a class="button secondary" href="../index.html#documentacao">Todos os documentos</a></header><main class="reader-main"><div class="reader-top"><span class="eyebrow">DOCUMENTAÇÃO DO PROJETO</span><p>Registro original do repositório · cópia de 19/11/2026</p><a href="../downloads/ProjetoAPS/README.md" download>Baixar fonte Markdown</a> · <a href="https://github.com/anahonorato/APS/blob/main/ProjetoAPS/README.md">Ver no GitHub</a></div><article class="prose"><h1>Projeto APS — Sistema de Apoio ao Estacionamento da UDF</h1>
+<p>Projeto acadêmico da disciplina <strong>Análise de Projeto de Sistemas</strong>, do curso de <strong>Engenharia de Software</strong> do Centro Universitário do Distrito Federal (UDF).</p>
+<p>A proposta busca melhorar o planejamento, o custo e a segurança dos estudantes que utilizam o estacionamento da instituição, principalmente no período noturno.</p>
+<h2>5W — Estrutura do Projeto</h2>
+<h3>🔍 <strong>WHAT</strong> (O quê?)</h3>
+<p>Proposta de um sistema que permita aos estudantes consultar, antes de se deslocarem até a UDF, a situação do estacionamento e as opções de pagamento disponíveis.</p>
+<p>O sistema poderá apresentar:</p>
+<ul>
+<li>disponibilidade de vagas;</li>
+<li>valores e horários do estacionamento;</li>
+<li>desconto noturno para estudantes;</li>
+<li>planos mensais, bimestrais e semestrais com valores reduzidos;</li>
+<li>proposta de isenção da taxa no período noturno para mulheres;</li>
+<li>informações e benefícios relacionados à segurança dos estudantes.</li>
+</ul>
+<h3>👥 <strong>WHO</strong> (Quem?)</h3>
+<p><strong>Equipe do projeto:</strong></p>
+<ul>
+<li><a href="https://github.com/anahonorato">Ana Luísa</a></li>
+<li><a href="https://github.com/RufinoX12">Gabriel Rufino</a></li>
+<li><a href="https://github.com/jhonwayne07">João Paulo Ribeiro</a></li>
+<li><a href="https://github.com/pietroviannadeveloper">Pietro Vianna</a></li>
+<li><a href="https://github.com/Derikcrash">Derik Noronha</a></li>
+<li><a href="https://github.com/mhenriqueazevedo-create">Matheus Henrique</a></li>
+</ul>
+<p><strong>Público-alvo:</strong> alunos da UDF que utilizam carro para ir à instituição, especialmente os estudantes do período noturno. A proposta também pode beneficiar professores, funcionários, visitantes e a administração do estacionamento.</p>
+<h3>⏰ <strong>WHEN</strong> (Quando?)</h3>
+<ul>
+<li><strong>Período:</strong> 2026</li>
+<li><strong>Status:</strong> em fase de análise e planejamento</li>
+<li><strong>Uso previsto:</strong> antes do deslocamento e durante a chegada do estudante à instituição</li>
+</ul>
+<h3>📍 <strong>WHERE</strong> (Onde?)</h3>
+<ul>
+<li><strong>Instituição:</strong> Centro Universitário do Distrito Federal (UDF)</li>
+<li><strong>Ambiente analisado:</strong> estacionamento utilizado pela comunidade acadêmica</li>
+<li><strong>Repositório:</strong> <a href="https://github.com/anahonorato/APS">GitHub — APS</a></li>
+</ul>
+<h3>🎯 <strong>WHY</strong> (Por quê?)</h3>
+<p>Atualmente, o aluno pode chegar à UDF sem saber se encontrará vaga. Essa falta de informação pode provocar perda de tempo, atrasos, circulação desnecessária e a necessidade de estacionar longe da instituição.</p>
+<p>No período noturno, o problema também envolve a <strong>segurança de homens e mulheres</strong>, pois trajetos maiores a pé aumentam a exposição dos estudantes. Para as mulheres, propõe-se especificamente a <strong>isenção da taxa de estacionamento à noite</strong>, incentivando o uso de uma área mais próxima e segura.</p>
+<p>Outro problema é o custo para quem utiliza o estacionamento com frequência, já que o pagamento é feito por diária. Por isso, o projeto propõe planos com desconto como alternativa mais econômica.</p>
+<hr>
+<h2>Problema a ser resolvido</h2>
+<blockquote>
+<p>A falta de informação antecipada sobre a disponibilidade de vagas e a ausência de opções de pagamento adequadas ao uso frequente dificultam o planejamento dos alunos, aumentam os custos e podem fazer com que estudantes estacionem longe da UDF, principalmente à noite.</p>
+</blockquote>
+<h2>Solução proposta</h2>
+<p>Criar a proposta de um sistema simples e acessível que reúna informações sobre vagas, preços, planos e benefícios do estacionamento.</p>
+<p>A disponibilidade poderá ser apresentada de maneira clara:</p>
+<ul>
+<li>🟢 <strong>Muitas vagas disponíveis</strong></li>
+<li>🟡 <strong>Poucas vagas disponíveis</strong></li>
+<li>🔴 <strong>Estacionamento lotado</strong></li>
+</ul>
+<p>Com essa informação, o estudante poderá decidir antecipadamente se irá de carro ou se utilizará outro meio de transporte.</p>
+<h2>Funcionalidades principais</h2>
+<h3>Consulta de vagas</h3>
+<p>Exibição da situação atual do estacionamento para reduzir a incerteza, o tempo de procura e os atrasos.</p>
+<h3>Tarifas e planos</h3>
+<p>Além da diária, o sistema apresentará propostas de planos para estudantes que utilizam o estacionamento com frequência:</p>
+<ul>
+<li><strong>plano mensal</strong>;</li>
+<li><strong>plano bimestral</strong>;</li>
+<li><strong>plano semestral</strong>;</li>
+<li><strong>desconto no período noturno</strong>.</li>
+</ul>
+<p>Os valores e percentuais de desconto dependerão da análise de viabilidade e da aprovação da instituição.</p>
+<h3>Segurança no período noturno</h3>
+<p>A proposta busca reduzir a necessidade de homens e mulheres estacionarem longe da UDF e realizarem longos trajetos a pé durante a noite.</p>
+<p>Como medida específica de proteção e incentivo, o projeto também prevê a proposta de <strong>isenção da taxa noturna para mulheres</strong>, sujeita à avaliação e à aprovação da instituição.</p>
+<h2>Objetivo geral</h2>
+<p>Facilitar o planejamento da ida à UDF, reduzir custos e atrasos e contribuir para deslocamentos mais seguros, especialmente no período noturno.</p>
+<h2>Objetivos específicos</h2>
+<ul>
+<li>Informar a disponibilidade de vagas antes da chegada do aluno.</li>
+<li>Reduzir o tempo gasto procurando estacionamento.</li>
+<li>Diminuir atrasos causados pela falta de vagas.</li>
+<li>Oferecer alternativas mais econômicas ao pagamento diário.</li>
+<li>Centralizar informações sobre tarifas, planos e benefícios.</li>
+<li>Incentivar o uso do estacionamento próximo à instituição durante a noite.</li>
+<li>Contribuir para a segurança de estudantes homens e mulheres.</li>
+<li>Propor isenção noturna especificamente para mulheres.</li>
+</ul>
+<h2>Benefícios esperados</h2>
+<ul>
+<li>melhor planejamento do deslocamento;</li>
+<li>menos tempo procurando vagas;</li>
+<li>redução de atrasos e circulação desnecessária;</li>
+<li>menor custo para usuários frequentes;</li>
+<li>mais segurança para homens e mulheres no período noturno;</li>
+<li>redução de trajetos externos a pé;</li>
+<li>maior proteção e incentivo ao uso do estacionamento por mulheres à noite;</li>
+<li>informações de estacionamento reunidas em um único local.</li>
+</ul>
+<h2>Escopo atual</h2>
+<p>Nesta etapa, o projeto está concentrado na <strong>análise do problema e na definição da solução</strong>. A escolha de tecnologias, APIs, sensores e formas de implementação será realizada somente em etapas futuras, caso a proposta avance.</p>
+<h2>Checklist do projeto</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Definição do problema</li>
+<li><input checked="" disabled="" type="checkbox"> Identificação do público-alvo</li>
+<li><input checked="" disabled="" type="checkbox"> Definição da solução proposta</li>
+<li><input checked="" disabled="" type="checkbox"> Levantamento inicial de funcionalidades</li>
+<li><input disabled="" type="checkbox"> Análise de requisitos</li>
+<li><input disabled="" type="checkbox"> Estudo de viabilidade</li>
+<li><input disabled="" type="checkbox"> Criação de protótipo das telas</li>
+<li><input disabled="" type="checkbox"> Validação da proposta com estudantes</li>
+<li><input disabled="" type="checkbox"> Apresentação final</li>
+</ul>
+<h2>Documentação</h2>
+<p>Os documentos do projeto poderão incluir:</p>
+<ul>
+<li>análise do problema;</li>
+<li>requisitos funcionais e não funcionais;</li>
+<li>regras de negócio;</li>
+<li>estudo de viabilidade;</li>
+<li>protótipos das telas;</li>
+<li>diagramas e apresentação final.</li>
+</ul>
+<h2>Documentação de requisitos</h2>
+<ul>
+<li><a href="../downloads/ProjetoAPS/Docs_Requisitos/Ficha-Elicita%C3%A7%C3%A3o-REQ-001.md">Ficha de elicitação REQ-001</a></li>
+</ul>
+<h2>Observação</h2>
+<p>Os descontos, planos e a isenção noturna para mulheres fazem parte da proposta acadêmica e dependeriam de análise jurídica, financeira e administrativa antes de uma possível adoção pela UDF.</p>
+<hr>
+<p><strong>Última atualização:</strong> setembro de 2026</p>
+</article><a class="button secondary" href="../index.html#documentacao">Voltar à documentação</a></main><footer><div><b>UDF Parking</b><p>Planejar a chegada. Cuidar do caminho.</p></div><div>Engenharia de Software · UDF<br>Projeto acadêmico · 2026</div><a href="https://github.com/anahonorato/APS">Repositório no GitHub</a></footer></body></html>
